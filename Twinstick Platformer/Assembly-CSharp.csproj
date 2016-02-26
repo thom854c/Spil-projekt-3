@@ -48,7 +48,9 @@
      <Compile Include="Assets\Scripts\CharacterController2D.cs" />
      <Compile Include="Assets\Scripts\ControllerParameters2D.cs" />
      <Compile Include="Assets\Scripts\ControllerState2D.cs" />
+     <Compile Include="Assets\Scripts\HitsObjectChecker.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\StaffState2D.cs" />
      <Compile Include="Assets\Scripts\test.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
