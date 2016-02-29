@@ -12,12 +12,7 @@ public class Crystal : MonoBehaviour
     {
         CrystalParent = GameObject.FindGameObjectWithTag("CrystalParent");
 
-        if (IsActive)
-        {
-            
-            CrystalParent.GetComponent<CrystalsScript>().Crystals.Add(gameObject); 
-        }
-        
+        IsActive = false;
 	}
 	
 	// Update is called once per frame
@@ -30,5 +25,14 @@ public class Crystal : MonoBehaviour
             IsActive = true;
             //Debug.Log("More Hearts");
         }
+        else if (IsActive && CrystalParent.GetComponent<CrystalsScript>().CrystalNumber < CrystalParent.GetComponent<CrystalsScript>().Crystals.Count)
+        {
+            CrystalParent.GetComponent<CrystalsScript>().Crystals.Remove(gameObject);
+
+            IsActive = false;
+
+            gameObject.transform.position = new Vector3(1000, 1000, 0);
+        }
+        
 	}
 }

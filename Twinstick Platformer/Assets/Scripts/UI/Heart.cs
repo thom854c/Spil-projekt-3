@@ -12,12 +12,7 @@ public class Heart : MonoBehaviour
     {
         HeartParent = GameObject.FindGameObjectWithTag("HeartParent");
 
-        if (IsActive)
-        {
-            
-            HeartParent.GetComponent<HeartsScript>().Hearts.Add(gameObject); 
-        }
-        
+        IsActive = false;
 	}
 	
 	// Update is called once per frame
@@ -29,6 +24,14 @@ public class Heart : MonoBehaviour
 
             IsActive = true;
             //Debug.Log("More Hearts");
+        }
+        else if (IsActive && HeartParent.GetComponent<HeartsScript>().HeartNumber < HeartParent.GetComponent<HeartsScript>().Hearts.Count)
+        {
+            HeartParent.GetComponent<HeartsScript>().Hearts.Remove(gameObject);
+
+            IsActive = false;
+
+            gameObject.transform.position = new Vector3(1000, 1000, 0);
         }
 	}
 }
