@@ -672,8 +672,8 @@ MonoBehaviour:
   CrystalsAngleIncrease: 0.3
   CrystalsStartAngle: 3.5
   CrystalNumber: 2
-  MaxMana: 0
-  CurMana: 0
+  MaxMana: 2
+  CurMana: 2
   EmptyCrystal: {fileID: 0}
   FullCrystal: {fileID: 21300000, guid: 54fed42fc9b99fa49b9ef3ca55cbb3a2, type: 3}
 --- !u!1001 &358935270
@@ -2127,6 +2127,11 @@ MonoBehaviour:
   AngleIncrease: -0.3
   StartAngle: 3
   HeartNumber: 3
+  MaxHP: 6
+  CurHP: 6
+  FullHeart: {fileID: 21300000, guid: 54fed42fc9b99fa49b9ef3ca55cbb3a2, type: 3}
+  HalfHeart: {fileID: 21300000, guid: 86c21c31ae378224cb4c814fcf15d7e5, type: 3}
+  EmptyHeart: {fileID: 0}
 --- !u!224 &1699743225 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22433222, guid: 9134673315e360247a0cbd42df375cbd,

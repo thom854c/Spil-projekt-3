@@ -37,6 +37,7 @@ public class CrystalsScript : MonoBehaviour
 	void Update () 
     {
         CrystalNumber = MaxMana;
+
         for (int i = 0; i < Crystals.Count; i++)
         {
 
@@ -48,6 +49,7 @@ public class CrystalsScript : MonoBehaviour
             var angle = i * CrystalsAngleIncrease + CrystalsStartAngle;
             Crystals[i].transform.position = new Vector3(CrystalsCircleRadius * Mathf.Cos(angle) + transform.position.x, CrystalsCircleRadius * Mathf.Sin(angle) + transform.position.y, 0);
 
+            //Checks which sprite to use, depending on current mana
             if (i + 1 > CurMana)
             {
                 Crystals[i].GetComponent<Image>().sprite = EmptyCrystal;
