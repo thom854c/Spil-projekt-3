@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CrystalsScript : MonoBehaviour 
 {
@@ -17,7 +18,13 @@ public class CrystalsScript : MonoBehaviour
     //Number of Hearts the player has (value will probably come from another script)
     public int CrystalNumber;
 
-    //public Vector2 HeartDirection;
+    //Maximum mana and current mana, propably comes from another script
+    public int MaxMana;
+    public int CurMana;
+
+    //Sprites for empty and full mana crystal
+    public Sprite EmptyCrystal;
+    public Sprite FullCrystal;
 
 	// Use this for initialization
 	void Start () 
@@ -29,6 +36,7 @@ public class CrystalsScript : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
+        CrystalNumber = MaxMana;
         for (int i = 0; i < Crystals.Count; i++)
         {
 
@@ -39,6 +47,16 @@ public class CrystalsScript : MonoBehaviour
 
             var angle = i * CrystalsAngleIncrease + CrystalsStartAngle;
             Crystals[i].transform.position = new Vector3(CrystalsCircleRadius * Mathf.Cos(angle) + transform.position.x, CrystalsCircleRadius * Mathf.Sin(angle) + transform.position.y, 0);
+
+            if (i + 1 > CurMana)
+            {
+                Crystals[i].GetComponent<Image>().sprite = EmptyCrystal;
+            }
+            else if (i < CurMana)
+            {
+                Crystals[i].GetComponent<Image>().sprite = FullCrystal; 
+            }
+
         }
       
 	}
