@@ -49,7 +49,6 @@ public class HeartsScript : MonoBehaviour
             var angle = i * AngleIncrease + StartAngle;
             Hearts[i].transform.position = new Vector3(HeartsCircleRadius * Mathf.Cos(angle) + transform.position.x, HeartsCircleRadius * Mathf.Sin(angle) + transform.position.y, 0);
 
-
             //Checks which sprite to use, depending on current health
             if (i + 0.5f == CurHP / 2)
             {
