@@ -10,6 +10,7 @@ public class Crystal : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
+        //Finds the object that manages the crystals
         CrystalParent = GameObject.FindGameObjectWithTag("CrystalParent");
 
         IsActive = false;
@@ -18,6 +19,7 @@ public class Crystal : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
+        //Adds itself to the list if CrystalNumber is larger than Crystal Count or removes itself if CrystalNumber is smaller than Crystal Count
         if (!IsActive && CrystalParent.GetComponent<CrystalsScript>().CrystalNumber > CrystalParent.GetComponent<CrystalsScript>().Crystals.Count)
         {
             CrystalParent.GetComponent<CrystalsScript>().Crystals.Add(gameObject);

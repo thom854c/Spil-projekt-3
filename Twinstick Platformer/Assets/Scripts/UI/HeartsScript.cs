@@ -39,13 +39,16 @@ public class HeartsScript : MonoBehaviour
     {
         HeartNumber = MaxHP / 2;
 
+        //For loop for managing the hearts
         for (int i = 0; i < Hearts.Count; i++)
         {
+            //Removes any empty space in the list
             while (Hearts[i] == null)
             {
                 Hearts.RemoveAt(i);
             }
 
+            //Places each heart in their correct position depending on position in list
             var angle = i * AngleIncrease + StartAngle;
             Hearts[i].transform.position = new Vector3(HeartsCircleRadius * Mathf.Cos(angle) + transform.position.x, HeartsCircleRadius * Mathf.Sin(angle) + transform.position.y, 0);
 

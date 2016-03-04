@@ -38,14 +38,16 @@ public class CrystalsScript : MonoBehaviour
     {
         CrystalNumber = MaxMana;
 
+        //For loop for managing the mana crystals
         for (int i = 0; i < Crystals.Count; i++)
         {
-
+            //Removes any empty space in the list
             while (Crystals[i] == null)
             {
                 Crystals.RemoveAt(i);
             }
 
+            //Places each crystal in their correct position depending on position in list 
             var angle = i * CrystalsAngleIncrease + CrystalsStartAngle;
             Crystals[i].transform.position = new Vector3(CrystalsCircleRadius * Mathf.Cos(angle) + transform.position.x, CrystalsCircleRadius * Mathf.Sin(angle) + transform.position.y, 0);
 
