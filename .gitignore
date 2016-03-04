@@ -7,8 +7,10 @@
 [Ll]ibrary/
 sysinfo.txt
 *.stackdump
-*.csproj
- 
+/[Bb]uild/
+/[Bb]uilds/
+/Assets/AssetStoreTools*
+
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
@@ -22,7 +24,18 @@ sysinfo.txt
 /*.user
 /*.unityproj
 /*.booproj
+/*.csproj
+/*.tmp
+/*.pidb
+/*.svd
+
+
+/*.pidb.meta
  
+/*.apk
+/*.unitypackage
+
+
 # ============ #
 # OS generated #
 # ============ #
