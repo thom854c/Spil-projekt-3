@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class CrystalsScript : MonoBehaviour 
 {
+    
 
     //public GameObject Hearts;
 
@@ -29,13 +30,15 @@ public class CrystalsScript : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-        
-
+        MaxMana = GetComponent<Player>().MaxMana;
+        CurMana = GetComponent<Player>().curMana;
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
+        MaxMana = GetComponent<Player>().MaxMana;
+        CurMana = GetComponent<Player>().curMana;
         CrystalNumber = MaxMana;
 
         //For loop for managing the mana crystals
