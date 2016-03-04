@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public int curMana, MaxMana, pushManaCost;
     public bool canPoint = true, manaUsedThisFrame = false;
 
-    public float manaTimer, manaRecharceTimer;
+    private float manaTimer, manaRecharceTimer;
     private string controllerString;
 
     public void Start()
