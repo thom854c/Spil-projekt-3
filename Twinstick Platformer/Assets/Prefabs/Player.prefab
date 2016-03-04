@@ -218,7 +218,7 @@ MonoBehaviour:
   SpeedAccelerationInAir: 1
   DeaccelerationOnGround: 0.98
   DeaccelerationInAir: 0.995
-  beforeManaRecharceTime: 5
+  beforeManaRecharceTime: 3
   manaRecharceTime: 0.2
   curMana: 6
   MaxMana: 6
