@@ -218,7 +218,7 @@ public class CharacterController2D : MonoBehaviour
                             else if (pointerActiveScript.CollisionStay)
                             {
 
-                                if (velocity.y <= 0)
+                                if (velocity.y <= 0 || jumpIn >= 0)
                                 {
                                     SetVerticalForce(-pointVector.normalized.y * PushMagnitude);
                                 }
@@ -226,6 +226,7 @@ public class CharacterController2D : MonoBehaviour
                                 {
                                     AddForce(new Vector2(0, -pointVector.normalized.y * PushMagnitude));
                                 }
+                                
                                 AddForce(new Vector2(-pointVector.normalized.x * PushMagnitude, 0));
 
 

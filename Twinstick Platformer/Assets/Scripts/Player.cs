@@ -22,14 +22,21 @@ public class Player : MonoBehaviour
     {
         controller = GetComponent<CharacterController2D>();
         isFacingRight = transform.localScale.x > 0;
-        if (Input.GetJoystickNames()[0] == "Wireless Controller")
+        if (Input.GetJoystickNames()[0] != null)
         {
-            controllerString = "Sony ";
+            if (Input.GetJoystickNames()[0] == "Wireless Controller")
+            {
+                controllerString = "Sony ";
+            }
+            else
+            {
+                controllerString = "Microsoft ";
+            }   
         }
         else
         {
             controllerString = "Microsoft ";
-        }
+        }   
 
     }
 
