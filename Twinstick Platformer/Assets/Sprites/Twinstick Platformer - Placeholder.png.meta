@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d5a79912bc5e3694f989b47c7431e2aa
-timeCreated: 1453888763
+timeCreated: 1456911498
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -61,14 +61,14 @@ TextureImporter:
         y: 864
         width: 64
         height: 96
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -32, y: 96}
-        - {x: -32, y: 0}
-        - {x: 32, y: 0}
-        - {x: 32, y: 96}
+      - - {x: -32, y: 48}
+        - {x: -32, y: -48}
+        - {x: 32, y: -48}
+        - {x: 32, y: 48}
     - name: Twinstick Platformer - Placeholder_1
       rect:
         serializedVersion: 2
@@ -91,10 +91,34 @@ TextureImporter:
         y: 872
         width: 24
         height: 24
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -32, y: 96}
+        - {x: -32, y: 0}
+        - {x: 32, y: 0}
+        - {x: 32, y: 96}
+        - {x: -32, y: 96}
+        - {x: -32, y: 0}
+        - {x: 32, y: 0}
+        - {x: 32, y: 96}
+        - {x: -32, y: 96}
+        - {x: -32, y: 0}
+        - {x: 32, y: 0}
+        - {x: 32, y: 96}
+      - - {x: -32, y: 96}
+        - {x: -32, y: 0}
+        - {x: 32, y: 0}
+        - {x: 32, y: 96}
+        - {x: -32, y: 96}
+        - {x: -32, y: 0}
+        - {x: 32, y: 0}
+        - {x: 32, y: 96}
+      - - {x: -32, y: 96}
+        - {x: -32, y: 0}
+        - {x: 32, y: 0}
+        - {x: 32, y: 96}
     - name: Twinstick Platformer - Placeholder_3
       rect:
         serializedVersion: 2
@@ -102,10 +126,50 @@ TextureImporter:
         y: 880
         width: 16
         height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -32, y: 96}
+        - {x: -32, y: 0}
+        - {x: 32, y: 0}
+        - {x: 32, y: 96}
+        - {x: -32, y: 96}
+        - {x: -32, y: 0}
+        - {x: 32, y: 0}
+        - {x: 32, y: 96}
+        - {x: -32, y: 96}
+        - {x: -32, y: 0}
+        - {x: 32, y: 0}
+        - {x: 32, y: 96}
+        - {x: -32, y: 96}
+        - {x: -32, y: 0}
+        - {x: 32, y: 0}
+        - {x: 32, y: 96}
+      - - {x: -32, y: 96}
+        - {x: -32, y: 0}
+        - {x: 32, y: 0}
+        - {x: 32, y: 96}
+        - {x: -32, y: 96}
+        - {x: -32, y: 0}
+        - {x: 32, y: 0}
+        - {x: 32, y: 96}
+        - {x: -32, y: 96}
+        - {x: -32, y: 0}
+        - {x: 32, y: 0}
+        - {x: 32, y: 96}
+      - - {x: -32, y: 96}
+        - {x: -32, y: 0}
+        - {x: 32, y: 0}
+        - {x: 32, y: 96}
+        - {x: -32, y: 96}
+        - {x: -32, y: 0}
+        - {x: 32, y: 0}
+        - {x: 32, y: 96}
+      - - {x: -32, y: 96}
+        - {x: -32, y: 0}
+        - {x: 32, y: 0}
+        - {x: 32, y: 96}
     outline: []
   spritePackingTag: 
   userData: 

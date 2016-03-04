@@ -164,6 +164,7 @@ public class CharacterController2D : MonoBehaviour
         var pointerActiveScript = PointDebugActive.GetComponent<HitsObjectChecker>();
 
         pointVector = new Vector2(horizontalPoint, verticalPoint);
+
         var characterCenter = new Vector2(myTransform.position.x + boxCollider.offset.x, myTransform.position.y + boxCollider.offset.y);
         Debug.DrawLine(characterCenter, characterCenter + (pointVector * 6), Color.cyan);
 
@@ -172,10 +173,25 @@ public class CharacterController2D : MonoBehaviour
 
         if (pointVector.magnitude > PointSensitivity)
         {
+            var pointVectorAngle = 0f;
+
+            if (pointVector.normalized.y > 0)
+            {
+                pointVectorAngle = (Mathf.Acos(pointVector.normalized.x)/(2*Mathf.PI))*8;
+                
+            }
+            else
+            {
+                pointVectorAngle = ((Mathf.PI + (Mathf.PI - Mathf.Acos(pointVector.normalized.x))) / (2 * Mathf.PI)) * 8;
+            }
+
+            pointVectorAngle = Mathf.Round(pointVectorAngle);
+
+            pointVector = new Vector2(Mathf.Cos(0.25f * Mathf.PI * pointVectorAngle), Mathf.Sin(0.25f * Mathf.PI * pointVectorAngle));
+
             PointDebugActive.transform.position = characterCenter + (pointVector.normalized * PointActiveLength);
             if (!pushing)
             {
-
                 PointDebugInactive.SetActive(true);
                 pointerActiveScript.TurnOff();
                 PointDebugInactive.transform.position = characterCenter + (pointVector.normalized * PointInactiveLenght);
@@ -189,23 +205,55 @@ public class CharacterController2D : MonoBehaviour
                 staffPosition = characterCenter + (pointVector.normalized * PointActiveLength);
                 if (pushingLastLastLastFrame)
                 {
-                    if (PushInAir)
+                    if (GetComponent<Player>() != null)
                     {
-                        AddForce(new Vector2(-pointVector.normalized.x * PushMagnitude, -pointVector.normalized.y * (PushMagnitude * 0.5f)));
+                        if (GetComponent<Player>().curMana > 0)
+                        {
+                            GetComponent<Player>().curMana -= GetComponent<Player>().pushManaCost;
+                            GetComponent<Player>().manaUsedThisFrame = true;
+                            if (PushInAir)
+                            {
+                                AddForce(new Vector2(-pointVector.normalized.x * PushMagnitude, -pointVector.normalized.y * (PushMagnitude * 0.5f)));
+                            }
+                            else if (pointerActiveScript.CollisionStay)
+                            {
+
+                                if (velocity.y <= 0)
+                                {
+                                    SetVerticalForce(-pointVector.normalized.y * PushMagnitude);
+                                }
+                                else
+                                {
+                                    AddForce(new Vector2(0, -pointVector.normalized.y * PushMagnitude));
+                                }
+                                AddForce(new Vector2(-pointVector.normalized.x * PushMagnitude, 0));
+
+
+                            }
+
+                        }
                     }
-                    else if (pointerActiveScript.CollisionStay)
+                    else
                     {
-                        if (velocity.y <= 0)
+                        if (PushInAir)
                         {
-                            SetVerticalForce(-pointVector.normalized.y * PushMagnitude);
+                            AddForce(new Vector2(-pointVector.normalized.x * PushMagnitude, -pointVector.normalized.y * (PushMagnitude * 0.5f)));
                         }
-                        else
+                        else if (pointerActiveScript.CollisionStay)
                         {
-                            AddForce(new Vector2(0, -pointVector.normalized.y * PushMagnitude));
-                        }
-                        AddForce(new Vector2(-pointVector.normalized.x * PushMagnitude, 0));
+
+                            if (velocity.y <= 0)
+                            {
+                                SetVerticalForce(-pointVector.normalized.y * PushMagnitude);
+                            }
+                            else
+                            {
+                                AddForce(new Vector2(0, -pointVector.normalized.y * PushMagnitude));
+                            }
+                            AddForce(new Vector2(-pointVector.normalized.x * PushMagnitude, 0));
 
 
+                        }
                     }
                 }
 

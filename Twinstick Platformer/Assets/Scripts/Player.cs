@@ -11,19 +11,31 @@ public class Player : MonoBehaviour
     public float MaxSpeed = 8;
     public float SpeedAccelerationOnGround = 10f;
     public float SpeedAccelerationInAir = 5f;
-    public float DeaccelerationOnGround = 0.97f, DeaccelerationInAir = 0.99f;
+    public float DeaccelerationOnGround = 0.97f, DeaccelerationInAir = 0.99f, beforeManaRecharceTime, manaRecharceTime;
+    public int curMana, MaxMana, pushManaCost;
+    public bool canPoint = true, manaUsedThisFrame = false;
 
-    public bool canPoint = true;
+    public float manaTimer, manaRecharceTimer;
+    private string controllerString;
 
     public void Start()
     {
         controller = GetComponent<CharacterController2D>();
         isFacingRight = transform.localScale.x > 0;
+        if (Input.GetJoystickNames()[0] == "Wireless Controller")
+        {
+            controllerString = "Sony ";
+        }
+        else
+        {
+            controllerString = "Microsoft ";
+        }
 
     }
 
     public void Update()
     {
+        HandleEnergy();
         HandleInput();
 
         var movementFactor = controller.State.IsGrounded ? SpeedAccelerationOnGround : SpeedAccelerationInAir;
@@ -31,10 +43,8 @@ public class Player : MonoBehaviour
 
         if (canPoint && !controller.Parameters.DisableAllMovement && !controller.Parameters.DisableControls)
         {
-            controller.PointAndPush(Input.GetAxis("RS Horizontal"), Input.GetAxis("RS Vertical"), Input.GetButton("Push"), Input.GetButtonDown("Push"));
+            controller.PointAndPush(Input.GetAxis(controllerString + "RS Horizontal"), Input.GetAxis(controllerString + "RS Vertical"), Input.GetButton(controllerString + "Push"), Input.GetButtonDown(controllerString + "Push"));
         }
-
-
     }
 
     public void FixedUpdate()
@@ -77,7 +87,7 @@ public class Player : MonoBehaviour
             Flip();
         }
 
-        if (controller.CanJump && Input.GetButtonDown("Jump"))
+        if (controller.CanJump && Input.GetButtonDown(controllerString + "Jump"))
         {
             controller.Jump();
         }
@@ -87,5 +97,34 @@ public class Player : MonoBehaviour
     {
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         isFacingRight = transform.localScale.x > 0;
+    }
+
+    public void HandleEnergy()
+    {
+        manaTimer += Time.deltaTime;
+        if (manaUsedThisFrame)
+        {
+            manaTimer = 0;
+        }
+
+        if (beforeManaRecharceTime <= manaTimer)
+        {
+            manaRecharceTimer += Time.deltaTime;
+            if (manaRecharceTimer >= manaRecharceTime)
+            {
+                if (curMana < MaxMana)
+                {
+                    manaRecharceTimer = 0f;
+                    curMana++;    
+                }
+                
+            }
+        }
+        else
+        {
+            manaRecharceTimer = 0;
+        }
+
+        manaUsedThisFrame = false;
     }
 }
