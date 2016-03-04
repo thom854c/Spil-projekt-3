@@ -8,9 +8,11 @@ public class CrystalsScript : MonoBehaviour
     
 
     //public GameObject Hearts;
-
     public List<GameObject> Crystals;
     
+    //Player
+    public GameObject Player;
+
     //Used for calculating heart position 
     public float CrystalsCircleRadius;
     public float CrystalsAngleIncrease;
@@ -20,8 +22,8 @@ public class CrystalsScript : MonoBehaviour
     public int CrystalNumber;
 
     //Maximum mana and current mana, propably comes from another script
-    public int MaxMana;
-    public int CurMana;
+    public int Max_Mana;
+    public int Cur_Mana;
 
     //Sprites for empty and full mana crystal
     public Sprite EmptyCrystal;
@@ -30,16 +32,17 @@ public class CrystalsScript : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-        MaxMana = GetComponent<Player>().MaxMana;
-        CurMana = GetComponent<Player>().curMana;
+        Player = GameObject.FindGameObjectWithTag("Player");
+        //Max_Mana = GetComponent<Player>().MaxMana;
+        //Cur_Mana = GetComponent<Player>().curMana;
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
-        MaxMana = GetComponent<Player>().MaxMana;
-        CurMana = GetComponent<Player>().curMana;
-        CrystalNumber = MaxMana;
+        Max_Mana = Player.GetComponent<Player>().MaxMana;
+        Cur_Mana = Player.GetComponent<Player>().curMana;
+        CrystalNumber = Max_Mana;
 
         //For loop for managing the mana crystals
         for (int i = 0; i < Crystals.Count; i++)
@@ -55,11 +58,11 @@ public class CrystalsScript : MonoBehaviour
             Crystals[i].transform.position = new Vector3(CrystalsCircleRadius * Mathf.Cos(angle) + transform.position.x, CrystalsCircleRadius * Mathf.Sin(angle) + transform.position.y, 0);
 
             //Checks which sprite to use, depending on current mana
-            if (i + 1 > CurMana)
+            if (i + 1 > Cur_Mana)
             {
                 Crystals[i].GetComponent<Image>().sprite = EmptyCrystal;
             }
-            else if (i < CurMana)
+            else if (i < Cur_Mana)
             {
                 Crystals[i].GetComponent<Image>().sprite = FullCrystal; 
             }
