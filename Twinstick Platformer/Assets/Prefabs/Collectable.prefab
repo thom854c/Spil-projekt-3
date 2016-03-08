@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 497836}
   - 212: {fileID: 21284704}
   - 58: {fileID: 5840666}
+  - 114: {fileID: 11487910}
   m_Layer: 0
   m_Name: Collectable
   m_TagString: Collectable
@@ -43,6 +44,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.16
+--- !u!114 &11487910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0458b2dab8b24949928fc47d74cf998, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21284704
 SpriteRenderer:
   m_ObjectHideFlags: 1

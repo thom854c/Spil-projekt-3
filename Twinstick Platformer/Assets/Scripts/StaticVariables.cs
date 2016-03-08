@@ -5,9 +5,13 @@ public class StaticVariables : MonoBehaviour
 {
 
     private static float enemyMovespeed;
-    private static int playerHealth = 10;
+    private static int playerHealth = 6;
     private static int enemyHealth;
+    private static int mana;
+    private static int obtainedCollectables;
     private static Vector2 activeCheckpoint;
+
+    public static int MaxHealth = 6, MaxMana;
 
     public static int PlayerHealth
     {
@@ -31,6 +35,18 @@ public class StaticVariables : MonoBehaviour
     {
         get { return activeCheckpoint; }
         set { activeCheckpoint = value; }
+    }
+
+    public static int ObtainedCollectables
+    {
+        get { return obtainedCollectables; }
+        set { obtainedCollectables = value; }
+    }
+
+    public static int Mana
+    {
+        get { return mana; }
+        set { mana = value; }
     }
 
 }

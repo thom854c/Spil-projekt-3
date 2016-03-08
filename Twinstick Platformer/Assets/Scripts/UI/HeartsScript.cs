@@ -39,6 +39,9 @@ public class HeartsScript : MonoBehaviour
     {
         HeartNumber = MaxHP / 2;
 
+	    CurHP = StaticVariables.PlayerHealth;
+	    MaxHP = StaticVariables.MaxHealth;
+
         //For loop for managing the hearts
         for (int i = 0; i < Hearts.Count; i++)
         {
