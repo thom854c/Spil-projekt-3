@@ -217,6 +217,10 @@ public class CharacterController2D : MonoBehaviour
                             }
                             else if (pointerActiveScript.CollisionStay)
                             {
+                                if (GetComponentInChildren<HitsObjectChecker>().EnemyHit != null)
+                                {
+                                    GetComponentInChildren<HitsObjectChecker>().EnemyHit.GetComponent<CharacterController2D>().AddForce(new Vector2(pointVector.normalized.x * PushMagnitude, pointVector.normalized.y * PushMagnitude));
+                                }
 
                                 if (velocity.y <= 0 || jumpIn >= 0)
                                 {
@@ -275,6 +279,10 @@ public class CharacterController2D : MonoBehaviour
     public void LateUpdate()
     {
         PointAndPushInLateUpdate();
+        if (GetComponentInChildren<HitsObjectChecker>() != null)
+        {
+            GetComponentInChildren<HitsObjectChecker>().EnemyHit = null;
+        }
         jumpIn -= Time.deltaTime;
         velocity.y += Parameters.Gravity * Time.deltaTime;
         Move(Velocity * Time.deltaTime, (Velocity * Time.deltaTime) + staffVelocity);

@@ -169,6 +169,7 @@ MonoBehaviour:
   CollisionStay: 0
   TurnedOff: 0
   CollisionIsChecked: 0
+  EnemyHit: {fileID: 0}
 --- !u!114 &11448078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -218,13 +219,15 @@ MonoBehaviour:
   SpeedAccelerationInAir: 1
   DeaccelerationOnGround: 0.98
   DeaccelerationInAir: 0.995
-  beforeManaRecharceTime: 3
+  beforeManaRecharceTime: 2
   manaRecharceTime: 0.2
   curMana: 6
   MaxMana: 6
   pushManaCost: 1
   canPoint: 1
   manaUsedThisFrame: 0
+  manaTimer: 0
+  manaRecharceTimer: 0
 --- !u!212 &21222462
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -7,11 +7,19 @@ public class HitsObjectChecker : MonoBehaviour
     public bool TurnedOff;
     public bool CollisionIsChecked = false;
 
+    public GameObject EnemyHit;
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Platforms") && !TurnedOff)
         {
                 CollisionStay = true;
+        }
+        if (other.gameObject.tag == "Enemy" && !TurnedOff)
+        {
+            EnemyHit = other.gameObject;
+            CollisionStay = true;
+            
         }
     }
 
