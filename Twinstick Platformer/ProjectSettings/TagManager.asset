@@ -7,6 +7,11 @@ TagManager:
   - Orb
   - PlayerDetector
   - Enemy
+  - Collectable
+  - HeartParent
+  - CrystalParent
+  - CheckPoint
+  - Trap
   layers:
   - Default
   - TransparentFX
