@@ -1,0 +1,2 @@
+Forklaring af hvordan de skal sættes: Showcase explanations.png
+Skygger lægges ud fra kanterne - floors har ikke skygger

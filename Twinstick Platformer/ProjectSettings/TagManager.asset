@@ -7,6 +7,9 @@ TagManager:
   - Orb
   - PlayerDetector
   - Enemy
+  - CrystalParent
+  - HeartParent
+  - Collectable
   layers:
   - Default
   - TransparentFX
@@ -49,4 +52,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: ColliderTiles
+    uniqueID: 267364081
     locked: 0

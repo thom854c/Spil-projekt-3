@@ -62,6 +62,8 @@
      <Compile Include="Assets\Scripts\UI\CrystalsScript.cs" />
      <Compile Include="Assets\Scripts\UI\Heart.cs" />
      <Compile Include="Assets\Scripts\UI\HeartsScript.cs" />
+     <Compile Include="Assets\Scripts\iTween.cs" />
+     <None Include="Assets\Sprites\Environmenttiles\Shadows.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
