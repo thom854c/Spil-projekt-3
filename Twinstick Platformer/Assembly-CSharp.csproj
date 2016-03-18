@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\DeadlyObject.cs" />
      <Compile Include="Assets\Scripts\DetectPlayer.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Scripts\FalseWall.cs" />
      <Compile Include="Assets\Scripts\HitsObjectChecker.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\StaffState2D.cs" />
