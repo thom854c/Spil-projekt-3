@@ -10,6 +10,8 @@ TagManager:
   - CrystalParent
   - HeartParent
   - Collectable
+  - Missile
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - 
   - 
   - Platforms
-  - 
+  - SceneOnly
   - 
   - 
   - 
