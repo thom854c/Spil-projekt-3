@@ -12,6 +12,8 @@ TagManager:
   - CrystalParent
   - CheckPoint
   - Trap
+  - Boss
+  - Missile
   layers:
   - Default
   - TransparentFX

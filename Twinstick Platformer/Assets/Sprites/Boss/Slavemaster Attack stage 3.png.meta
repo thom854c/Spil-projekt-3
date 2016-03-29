@@ -1,0 +1,230 @@
+fileFormatVersion: 2
+guid: 02abba3e98b924f4abe5839ac6eb0df0
+timeCreated: 1459251922
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Slavemaster Attack stage 3_0
+    21300002: Slavemaster Attack stage 3_1
+    21300004: Slavemaster Attack stage 3_2
+    21300006: Slavemaster Attack stage 3_3
+    21300008: Slavemaster Attack stage 3_4
+    21300010: Slavemaster Attack stage 3_5
+    21300012: Slavemaster Attack stage 3_6
+    21300014: Slavemaster Attack stage 3_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 16
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Slavemaster Attack stage 3_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 241
+        width: 135
+        height: 140
+      alignment: 9
+      pivot: {x: 0.5096144, y: 0.5834394}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43.797943, y: 58.31848}
+        - {x: -68.79794, y: 51.31848}
+        - {x: -68.79794, y: -21.681519}
+        - {x: -41.797943, y: -55.68152}
+        - {x: -34.797943, y: -55.68152}
+        - {x: -28.797943, y: -74.68152}
+        - {x: -24.797943, y: -81.68152}
+        - {x: 27.202057, y: -81.68152}
+        - {x: 66.20206, y: 0.31848145}
+        - {x: 66.20206, y: 58.31848}
+    - name: Slavemaster Attack stage 3_1
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 241
+        width: 137
+        height: 144
+      alignment: 9
+      pivot: {x: 0.50473714, y: 0.5676013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28.851013, y: -37.73459}
+        - {x: 34.851013, y: -39.73459}
+        - {x: 51.851013, y: -35.73459}
+        - {x: 67.85101, y: 14.265411}
+        - {x: 67.85101, y: 62.26541}
+        - {x: -64.14899, y: 62.26541}
+        - {x: -69.14899, y: 38.26541}
+        - {x: -69.14899, y: -22.734589}
+        - {x: -43.148987, y: -55.73459}
+        - {x: -38.148987, y: -51.73459}
+        - {x: -35.148987, y: -78.73459}
+        - {x: -24.148987, y: -81.73459}
+        - {x: 17.851013, y: -81.73459}
+        - {x: 19.851013, y: -77.73459}
+        - {x: 28.851013, y: -26.734589}
+        - {x: 31.851013, y: -22.734589}
+    - name: Slavemaster Attack stage 3_2
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 241
+        width: 120
+        height: 156
+      alignment: 9
+      pivot: {x: 0.41887817, y: 0.5208003}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37.26538, y: 74.75516}
+        - {x: -50.26538, y: 67.75516}
+        - {x: -50.26538, y: -71.24484}
+        - {x: -48.26538, y: -81.24484}
+        - {x: 28.73462, y: -81.24484}
+        - {x: 69.73462, y: 3.7551575}
+        - {x: 69.73462, y: 72.75516}
+        - {x: 68.73462, y: 74.75516}
+    - name: Slavemaster Attack stage 3_3
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 241
+        width: 108
+        height: 171
+      alignment: 9
+      pivot: {x: 0.25963902, y: 0.4696386}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15.958984, y: 90.6918}
+        - {x: -18.041016, y: 68.6918}
+        - {x: -28.041016, y: 45.691803}
+        - {x: -28.041016, y: -79.3082}
+        - {x: -26.041016, y: -80.3082}
+        - {x: 30.958984, y: -80.3082}
+        - {x: 79.958984, y: -2.308197}
+        - {x: 79.958984, y: 76.6918}
+        - {x: 61.958984, y: 90.6918}
+    - name: Slavemaster Attack stage 3_4
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 45
+        width: 108
+        height: 175
+      alignment: 9
+      pivot: {x: 0.27165738, y: 0.47404087}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8.661003, y: 92.04285}
+        - {x: -29.338997, y: 70.04285}
+        - {x: -29.338997, y: -82.95715}
+        - {x: 22.661003, y: -82.95715}
+        - {x: 78.661, y: -40.957153}
+        - {x: 78.661, y: 90.04285}
+        - {x: 76.661, y: 92.04285}
+    - name: Slavemaster Attack stage 3_5
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 45
+        width: 115
+        height: 180
+      alignment: 9
+      pivot: {x: 0.30248624, y: 0.4531295}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3.7859192, y: 98.43669}
+        - {x: -12.785919, y: 95.43669}
+        - {x: -34.78592, y: 35.43669}
+        - {x: -34.78592, y: -78.56331}
+        - {x: -26.78592, y: -81.56331}
+        - {x: 21.21408, y: -81.56331}
+        - {x: 80.21408, y: -10.563309}
+        - {x: 80.21408, y: 90.43669}
+        - {x: 72.21408, y: 98.43669}
+    - name: Slavemaster Attack stage 3_6
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 45
+        width: 125
+        height: 185
+      alignment: 9
+      pivot: {x: 0.29752, y: 0.4403644}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 87.81, y: 0.53258514}
+        - {x: 87.81, y: 100.532585}
+        - {x: 71.81, y: 103.532585}
+        - {x: -1.1900024, y: 103.532585}
+        - {x: -37.190002, y: 76.532585}
+        - {x: -37.190002, y: -81.467415}
+        - {x: 15.809998, y: -81.467415}
+        - {x: 17.809998, y: -77.467415}
+        - {x: 17.809998, y: -60.467415}
+        - {x: 59.809998, y: -29.467415}
+    - name: Slavemaster Attack stage 3_7
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 45
+        width: 137
+        height: 190
+      alignment: 9
+      pivot: {x: 0.3105179, y: 0.4316868}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16.459045, y: 107.97951}
+        - {x: -28.540955, y: 59.979507}
+        - {x: -42.540955, y: 0.97950745}
+        - {x: -42.540955, y: -61.020493}
+        - {x: -23.540955, y: -82.02049}
+        - {x: 25.459045, y: -82.02049}
+        - {x: 94.459045, y: -5.0204926}
+        - {x: 94.459045, y: 107.97951}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

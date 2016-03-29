@@ -1,0 +1,188 @@
+fileFormatVersion: 2
+guid: a988d882b7b93ba459838162ef0d356a
+timeCreated: 1459241207
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: slavemaster idle_0
+    21300002: slavemaster idle_1
+    21300004: slavemaster idle_2
+    21300006: slavemaster idle_3
+    21300008: slavemaster idle_4
+    21300010: slavemaster idle_5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 16
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: slavemaster idle_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 350
+        width: 135
+        height: 140
+      alignment: 9
+      pivot: {x: 0.5062504, y: 0.58136684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43.343803, y: 58.608643}
+        - {x: -68.3438, y: 51.608643}
+        - {x: -68.3438, y: -21.391357}
+        - {x: -41.343803, y: -55.391357}
+        - {x: -34.343803, y: -55.391357}
+        - {x: -28.343803, y: -74.39136}
+        - {x: -24.343803, y: -81.39136}
+        - {x: 27.656197, y: -81.39136}
+        - {x: 66.6562, y: 0.6086426}
+        - {x: 66.6562, y: 58.608643}
+    - name: slavemaster idle_1
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 351
+        width: 135
+        height: 140
+      alignment: 9
+      pivot: {x: 0.50312525, y: 0.58438045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 67.078094, y: 54.186737}
+        - {x: 59.078094, y: 58.186737}
+        - {x: -24.921906, y: 58.186737}
+        - {x: -67.921906, y: 48.186737}
+        - {x: -67.921906, y: -29.813263}
+        - {x: -57.921906, y: -54.813263}
+        - {x: -40.921906, y: -55.813263}
+        - {x: -36.921906, y: -53.813263}
+        - {x: -34.921906, y: -77.81326}
+        - {x: -19.921906, y: -81.81326}
+        - {x: 19.078094, y: -81.81326}
+        - {x: 21.078094, y: -77.81326}
+        - {x: 37.078094, y: -51.813263}
+        - {x: 67.078094, y: 6.186737}
+    - name: slavemaster idle_2
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 185
+        width: 135
+        height: 140
+      alignment: 9
+      pivot: {x: 0.5062504, y: 0.58438045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -68.3438, y: 58.186737}
+        - {x: -68.3438, y: -81.81326}
+        - {x: 40.656197, y: -81.81326}
+        - {x: 66.6562, y: 10.186737}
+        - {x: 66.6562, y: 56.186737}
+        - {x: 59.656197, y: 58.186737}
+    - name: slavemaster idle_3
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 186
+        width: 135
+        height: 141
+      alignment: 9
+      pivot: {x: 0.5, y: 0.582204}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -67.5, y: 58.90924}
+        - {x: -67.5, y: -30.09076}
+        - {x: -61.5, y: -62.09076}
+        - {x: -39.5, y: -61.09076}
+        - {x: -35.5, y: -57.09076}
+        - {x: -27.5, y: -75.09076}
+        - {x: -16.5, y: -82.09076}
+        - {x: 13.5, y: -82.09076}
+        - {x: 20.5, y: -78.09076}
+        - {x: 67.5, y: -16.09076}
+        - {x: 67.5, y: 58.90924}
+    - name: slavemaster idle_4
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 18
+        width: 135
+        height: 140
+      alignment: 9
+      pivot: {x: 0.50381225, y: 0.58455056}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -68.014656, y: 58.162918}
+        - {x: -68.014656, y: -81.83708}
+        - {x: 40.985344, y: -81.83708}
+        - {x: 66.985344, y: 10.162918}
+        - {x: 66.985344, y: 56.162918}
+        - {x: 59.985344, y: 58.162918}
+    - name: slavemaster idle_5
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 17
+        width: 135
+        height: 140
+      alignment: 9
+      pivot: {x: 0.50385267, y: 0.58266234}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.020111, y: 58.42727}
+        - {x: -68.02011, y: 50.42727}
+        - {x: -68.02011, y: -16.572731}
+        - {x: -42.02011, y: -54.57273}
+        - {x: -34.02011, y: -55.57273}
+        - {x: -28.020111, y: -74.57273}
+        - {x: -22.020111, y: -81.57273}
+        - {x: 19.979889, y: -81.57273}
+        - {x: 24.979889, y: -80.57273}
+        - {x: 57.97989, y: -40.57273}
+        - {x: 66.97989, y: 0.42726898}
+        - {x: 66.97989, y: 58.42727}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

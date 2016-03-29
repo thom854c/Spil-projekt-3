@@ -1,22 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.ComponentModel;
+using UnityEngine.SceneManagement;
 
 public class BossBehaviour : MonoBehaviour
 {
-    private int phase, startHealth;
-    private float cycleTime, startFireSpeed;
+    private int phase, startHealth, attacksFired = 1;
+    private float fireCooldown, cycleTime, spawnTime;
+    private Animator anim;
     public float MaxCycleLenght, FireSpeed;
     public GameObject TPPoint1, TPPoint2, TPPoint3, Missile;
+    public bool FireMissleStar, ResetCycleTime, TeleportNow;
 	void Start ()
 	{
 	    startHealth = StaticVariables.BossHealth;
-	    startFireSpeed = FireSpeed;
+	    anim = GetComponent<Animator>();
+	    transform.parent.position = TPPoint1.transform.position;
 	}
 	
 
-	void Update () 
-    {
+	void Update ()
+	{
 	    HandleHealth();
 	    switch (phase)
 	    {
@@ -36,7 +40,13 @@ public class BossBehaviour : MonoBehaviour
 	        StaticVariables.BossHealth -= 6;
             
 	    }
-
+	    if (ResetCycleTime)
+	    {
+	        cycleTime = 0;
+            anim.SetBool("StartFire",false);
+	    }
+	    MissileStar();
+        Teleport();
     }
 
     void HandleHealth()
@@ -61,106 +71,105 @@ public class BossBehaviour : MonoBehaviour
 
     void Phase1()
     {
-        Debug.Log("en");
-        if (cycleTime >= MaxCycleLenght)
-        {
-            cycleTime = 0;
-            FireSpeed = startFireSpeed;
-        }
 
-        if (cycleTime < MaxCycleLenght/3)
+        if (cycleTime > FireSpeed && !anim.GetBool("StartFire") && !anim.GetBool("Teleport"))
         {
-            transform.position = TPPoint1.transform.position;
-        }
-        else if (cycleTime < MaxCycleLenght*2/3)
-        {
-            transform.position = TPPoint2.transform.position;
-        }
-        else
-        {
-            transform.position = TPPoint3.transform.position;
-        }
-        if (cycleTime > FireSpeed)
-        {
-            MissileStar();
-            FireSpeed += startFireSpeed;
+            anim.SetBool("StartFire", true);
+            attacksFired ++;
+            anim.SetInteger("Phase", 1);
         }
 
     }
 
     void Phase2()
     {
-        Debug.Log("to");
-        if (cycleTime >= MaxCycleLenght)
+        if (cycleTime > FireSpeed && !anim.GetBool("Teleport"))
         {
-            cycleTime = 0;
-            FireSpeed = startFireSpeed;
+            attacksFired++;
+            cycleTime = -2;
         }
-        if (cycleTime < MaxCycleLenght / 3)
-        {
-            transform.position = TPPoint1.transform.position;
-        }
-        else if (cycleTime < MaxCycleLenght * 2 / 3)
-        {
-            transform.position = TPPoint2.transform.position;
-        }
-        else
-        {
-            transform.position = TPPoint3.transform.position;
-        }
-        if (cycleTime > FireSpeed)
-        {
-            FireSpeed += startFireSpeed;
-        }
+        anim.SetInteger("Phase", 2);
         MisselRain();
     }
 
     void Phase3()
     {
-        Debug.Log("tre");
-        float shortCycleLenght = MaxCycleLenght*0.8f;
-        if (cycleTime >= shortCycleLenght)
+        if (cycleTime > FireSpeed && !anim.GetBool("StartFire") && !anim.GetBool("Teleport"))
         {
-            cycleTime = 0;
-            FireSpeed = startFireSpeed;
+            anim.SetBool("StartFire", true);
+            attacksFired++;
         }
-        if (cycleTime < shortCycleLenght / 3)
-        {
-            transform.position = TPPoint1.transform.position;
-        }
-        else if (cycleTime < shortCycleLenght * 2 / 3)
-        {
-            transform.position = TPPoint2.transform.position;
-        }
-        else
-        {
-            transform.position = TPPoint3.transform.position;
-        }
-        if (cycleTime > FireSpeed * 0.8)
-        {
-            MissileStar();
-            FireSpeed += startFireSpeed;
-        }
+        anim.SetInteger("Phase", 3);
         MisselRain();
     }
 
     void MissileStar()
     {
-        for (int i = 0; i < 360; i+=45)
+        fireCooldown -= Time.deltaTime;
+        if (FireMissleStar && fireCooldown < 0)
         {
-            Instantiate(Missile, transform.position, Quaternion.Euler(0,0,i));
+            for (int i = 0; i < 360; i += 45)
+            {
+                Instantiate(Missile, transform.position, Quaternion.Euler(0, 0, i));
+            }
+            fireCooldown = 0.3f;
         }
-        
 
     }
 
     void MisselRain()
     {
-        for (int i = 95; i < Random.Range(0,100); i++)
+        
+        spawnTime += Time.deltaTime;
+        if (spawnTime > 0.1f)
         {
-            Instantiate(Missile, new Vector3(Random.Range(-176, -26), 46.5f),
-                Quaternion.Euler(0, 0, Random.Range(150, 210)));
+            for (int i = 70; i < Random.Range(0, 100); i++)
+            {
+                Instantiate(Missile, new Vector3(Random.Range(-176, -26), 46.5f),
+                    Quaternion.Euler(0, 0, Random.Range(150, 210)));
+            }
+            spawnTime = 0;
         }
+
+
+    }
+
+    void Teleport()
+    {
+        if (attacksFired < 3 && transform.parent.position != TPPoint1.transform.position && !anim.GetBool("Teleport"))
+        {
+            anim.SetBool("Teleport", true);
+        }
+        else if (attacksFired > 2 && attacksFired < 5 && transform.parent.position != TPPoint2.transform.position && !anim.GetBool("Teleport"))
+        {
+            anim.SetBool("Teleport", true);
+        }
+        else if (transform.parent.position != TPPoint3.transform.position && attacksFired > 4 && !anim.GetBool("Teleport"))
+        {
+            anim.SetBool("Teleport", true);
+        }
+
+        if (attacksFired > 6)
+        {
+            attacksFired = 1;
+        }
+
+        if (attacksFired < 3 && TeleportNow)
+        {
+            transform.parent.position = TPPoint1.transform.position;
+            anim.SetBool("Teleport", false);
+        }
+        else if (attacksFired < 5 && TeleportNow)
+        {
+            transform.parent.position = TPPoint2.transform.position;
+            anim.SetBool("Teleport", false);
+        }
+        else if (TeleportNow)
+        {
+            transform.parent.position = TPPoint3.transform.position;
+            anim.SetBool("Teleport", false);
+        }
+
 
     }
 }

@@ -1,0 +1,232 @@
+fileFormatVersion: 2
+guid: 8c9b48350070c764a90963609dd6822b
+timeCreated: 1459242051
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Slavemaster Martin Attack stage 1 spritesheet FIXED_0
+    21300002: Slavemaster Martin Attack stage 1 spritesheet FIXED_1
+    21300004: Slavemaster Martin Attack stage 1 spritesheet FIXED_2
+    21300006: Slavemaster Martin Attack stage 1 spritesheet FIXED_3
+    21300008: Slavemaster Martin Attack stage 1 spritesheet FIXED_4
+    21300010: Slavemaster Martin Attack stage 1 spritesheet FIXED_5
+    21300012: Slavemaster Martin Attack stage 1 spritesheet FIXED_6
+    21300014: Slavemaster Martin Attack stage 1 spritesheet FIXED_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 16
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Slavemaster Martin Attack stage 1 spritesheet FIXED_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176.5
+        width: 216
+        height: 176.5
+      alignment: 9
+      pivot: {x: 0.5153417, y: 0.55096126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52.313805, y: 61.00534}
+        - {x: -70.313805, y: 48.00534}
+        - {x: -70.313805, y: -14.994659}
+        - {x: -41.313805, y: -54.99466}
+        - {x: -34.313805, y: -54.99466}
+        - {x: -28.313805, y: -73.99466}
+        - {x: -18.313805, y: -82.99466}
+        - {x: 12.686195, y: -82.99466}
+        - {x: 23.686195, y: -77.99466}
+        - {x: 68.686195, y: 8.005341}
+        - {x: 68.686195, y: 61.00534}
+    - name: Slavemaster Martin Attack stage 1 spritesheet FIXED_1
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 176.5
+        width: 216
+        height: 176.5
+      alignment: 9
+      pivot: {x: 0.48465827, y: 0.54827917}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 64.31381, y: 65.47873}
+        - {x: 29.313812, y: 65.47873}
+        - {x: 24.313812, y: 50.47873}
+        - {x: 10.313812, y: 65.47873}
+        - {x: -35.686188, y: 65.47873}
+        - {x: -70.68619, y: 55.47873}
+        - {x: -70.68619, y: -10.521271}
+        - {x: -48.686188, y: -44.52127}
+        - {x: -41.686188, y: -52.52127}
+        - {x: -37.686188, y: -50.52127}
+        - {x: -38.686188, y: -38.52127}
+        - {x: -28.686188, y: -73.52127}
+        - {x: -21.686188, y: -82.52127}
+        - {x: 17.313812, y: -82.52127}
+        - {x: 58.313812, y: -36.52127}
+        - {x: 70.31381, y: 7.4787292}
+        - {x: 70.31381, y: 63.47873}
+    - name: Slavemaster Martin Attack stage 1 spritesheet FIXED_2
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 176
+        width: 216
+        height: 176
+      alignment: 9
+      pivot: {x: 0.44883332, y: 0.55382484}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33.052002, y: -42.473175}
+        - {x: 41.052002, y: -50.473175}
+        - {x: 61.052002, y: -20.473175}
+        - {x: 61.052002, y: 56.526825}
+        - {x: 60.052002, y: 60.526825}
+        - {x: -52.947998, y: 60.526825}
+        - {x: -52.947998, y: -59.473175}
+        - {x: -48.947998, y: -83.473175}
+        - {x: 12.052002, y: -83.473175}
+        - {x: 25.052002, y: -79.473175}
+        - {x: 30.052002, y: -26.473175}
+        - {x: 34.052002, y: -23.473175}
+        - {x: 31.052002, y: -36.473175}
+    - name: Slavemaster Martin Attack stage 1 spritesheet FIXED_3
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 176.5
+        width: 216
+        height: 176.5
+      alignment: 9
+      pivot: {x: 0.4184819, y: 0.5508217}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8.60791, y: 61.02997}
+        - {x: -18.39209, y: 61.02997}
+        - {x: -30.39209, y: 31.029968}
+        - {x: -30.39209, y: -54.97003}
+        - {x: -28.39209, y: -72.97003}
+        - {x: -19.39209, y: -82.97003}
+        - {x: 29.60791, y: -82.97003}
+        - {x: 66.60791, y: -12.970032}
+        - {x: 66.60791, y: 40.02997}
+        - {x: 14.60791, y: 60.02997}
+    - name: Slavemaster Martin Attack stage 1 spritesheet FIXED_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.5
+        width: 216
+        height: 176.5
+      alignment: 9
+      pivot: {x: 0.5290388, y: 0.59328634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 55.727623, y: 62.534966}
+        - {x: -27.272377, y: 62.534966}
+        - {x: -32.272377, y: 48.534966}
+        - {x: -32.272377, y: -75.465034}
+        - {x: -30.272377, y: -81.465034}
+        - {x: 15.727623, y: -81.465034}
+        - {x: 74.72762, y: -27.465034}
+        - {x: 74.72762, y: 58.534966}
+    - name: Slavemaster Martin Attack stage 1 spritesheet FIXED_5
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0.5
+        width: 216
+        height: 176.5
+      alignment: 9
+      pivot: {x: 0.49818504, y: 0.5977285}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37.60797, y: 61.750923}
+        - {x: -37.60797, y: -82.24908}
+        - {x: 29.392029, y: -82.24908}
+        - {x: 78.39203, y: -31.249077}
+        - {x: 78.39203, y: 50.750923}
+        - {x: 35.39203, y: 61.750923}
+    - name: Slavemaster Martin Attack stage 1 spritesheet FIXED_6
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0.5
+        width: 216
+        height: 176.5
+      alignment: 9
+      pivot: {x: 0.46551627, y: 0.5955074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34.551514, y: 62.142944}
+        - {x: -40.551514, y: 48.142944}
+        - {x: -40.551514, y: -69.857056}
+        - {x: -36.551514, y: -81.857056}
+        - {x: 17.448486, y: -81.857056}
+        - {x: 81.44849, y: -22.857056}
+        - {x: 81.44849, y: 62.142944}
+    - name: Slavemaster Martin Attack stage 1 spritesheet FIXED_7
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 0.5
+        width: 216
+        height: 176.5
+      alignment: 9
+      pivot: {x: 0.43103254, y: 0.5977285}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.103027, y: 61.750923}
+        - {x: -46.103027, y: 25.750923}
+        - {x: -46.103027, y: -65.24908}
+        - {x: -37.103027, y: -82.24908}
+        - {x: 22.896973, y: -82.24908}
+        - {x: 87.89697, y: -25.249077}
+        - {x: 87.89697, y: 61.750923}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

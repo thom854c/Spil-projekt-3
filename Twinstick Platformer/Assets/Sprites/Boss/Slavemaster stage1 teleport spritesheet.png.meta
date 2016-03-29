@@ -1,0 +1,372 @@
+fileFormatVersion: 2
+guid: e47ac9b5c9fca8641a72ff597bd5adb9
+timeCreated: 1459247733
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Slavemaster stage1 teleport spritesheet_0
+    21300002: Slavemaster stage1 teleport spritesheet_1
+    21300004: Slavemaster stage1 teleport spritesheet_2
+    21300006: Slavemaster stage1 teleport spritesheet_3
+    21300008: Slavemaster stage1 teleport spritesheet_4
+    21300010: Slavemaster stage1 teleport spritesheet_5
+    21300012: Slavemaster stage1 teleport spritesheet_6
+    21300014: Slavemaster stage1 teleport spritesheet_7
+    21300016: Slavemaster stage1 teleport spritesheet_8
+    21300018: Slavemaster stage1 teleport spritesheet_9
+    21300020: Slavemaster stage1 teleport spritesheet_10
+    21300022: Slavemaster stage1 teleport spritesheet_11
+    21300024: Slavemaster stage1 teleport spritesheet_12
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 16
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Slavemaster stage1 teleport spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512.25
+        width: 216.75
+        height: 170.75
+      alignment: 9
+      pivot: {x: 0.5126205, y: 0.53738105}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -70.2355, y: 60.367188}
+        - {x: -70.2355, y: -14.6328125}
+        - {x: -41.235497, y: -55.632812}
+        - {x: -34.235497, y: -55.632812}
+        - {x: -30.235497, y: -74.63281}
+        - {x: -20.235497, y: -83.63281}
+        - {x: 33.764503, y: -83.63281}
+        - {x: 68.7645, y: 3.3671875}
+        - {x: 68.7645, y: 60.367188}
+    - name: Slavemaster stage1 teleport spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 512.25
+        width: 216.75
+        height: 170.75
+      alignment: 9
+      pivot: {x: 0.47896588, y: 0.5320411}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36.059143, y: -38.72101}
+        - {x: 71.05914, y: -6.7210083}
+        - {x: 71.05914, y: 63.27899}
+        - {x: 69.05914, y: 65.27899}
+        - {x: -65.94086, y: 65.27899}
+        - {x: -69.94086, y: 57.27899}
+        - {x: -69.94086, y: -15.721008}
+        - {x: -58.940857, y: -52.72101}
+        - {x: -40.940857, y: -52.72101}
+        - {x: -36.940857, y: -50.72101}
+        - {x: -37.940857, y: -38.72101}
+        - {x: -27.940857, y: -73.72101}
+        - {x: -18.940857, y: -82.72101}
+        - {x: 12.059143, y: -82.72101}
+        - {x: 25.059143, y: -78.72101}
+        - {x: 30.059143, y: -25.721008}
+        - {x: 33.059143, y: -21.721008}
+        - {x: 30.059143, y: -36.72101}
+    - name: Slavemaster stage1 teleport spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 512.25
+        width: 216.75
+        height: 170.75
+      alignment: 9
+      pivot: {x: 0.4495178, y: 0.53738105}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 32.442017, y: -42.632812}
+        - {x: 36.442017, y: -41.632812}
+        - {x: 52.442017, y: -31.632812}
+        - {x: 60.442017, y: -8.6328125}
+        - {x: 60.442017, y: 57.367188}
+        - {x: 54.442017, y: 60.367188}
+        - {x: -53.557983, y: 60.367188}
+        - {x: -53.557983, y: -55.632812}
+        - {x: -50.557983, y: -83.63281}
+        - {x: 11.442017, y: -83.63281}
+        - {x: 24.442017, y: -79.63281}
+        - {x: 29.442017, y: -26.632812}
+        - {x: 33.442017, y: -23.632812}
+        - {x: 30.442017, y: -36.632812}
+    - name: Slavemaster stage1 teleport spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 512.25
+        width: 216.75
+        height: 170.75
+      alignment: 9
+      pivot: {x: 0.4157011, y: 0.5297251}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.22821, y: 61.67444}
+        - {x: -30.22821, y: 51.67444}
+        - {x: -30.22821, y: -82.32556}
+        - {x: 27.77179, y: -82.32556}
+        - {x: 66.77179, y: -22.325562}
+        - {x: 66.77179, y: 45.67444}
+        - {x: 36.77179, y: 61.67444}
+    - name: Slavemaster stage1 teleport spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 342.25
+        width: 216.75
+        height: 170.75
+      alignment: 9
+      pivot: {x: 0.5140499, y: 0.5475597}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.545311, y: 61.62918}
+        - {x: -29.545311, y: 57.62918}
+        - {x: -29.545311, y: -81.37082}
+        - {x: -26.545311, y: -82.37082}
+        - {x: 30.454689, y: -82.37082}
+        - {x: 77.45469, y: -24.37082}
+        - {x: 77.45469, y: 61.62918}
+    - name: Slavemaster stage1 teleport spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 342.25
+        width: 216.75
+        height: 170.75
+      alignment: 9
+      pivot: {x: 0.48595008, y: 0.5416147}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.454681, y: 62.644287}
+        - {x: -23.454681, y: 61.644287}
+        - {x: -35.45468, y: 29.644287}
+        - {x: -35.45468, y: -64.35571}
+        - {x: -30.454681, y: -81.35571}
+        - {x: 57.54532, y: -81.35571}
+        - {x: 80.54532, y: -33.355713}
+        - {x: 80.54532, y: 62.644287}
+    - name: Slavemaster stage1 teleport spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 342.25
+        width: 216.75
+        height: 170.75
+      alignment: 9
+      pivot: {x: 0.4484838, y: 0.5475597}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 67.66614, y: 61.62918}
+        - {x: -27.333862, y: 61.62918}
+        - {x: -37.333862, y: 41.62918}
+        - {x: -37.333862, y: -60.37082}
+        - {x: -26.333862, y: -82.37082}
+        - {x: 19.666138, y: -82.37082}
+        - {x: 23.666138, y: -79.37082}
+        - {x: 84.66614, y: -10.370819}
+        - {x: 84.66614, y: 52.62918}
+        - {x: 83.66614, y: 60.62918}
+    - name: Slavemaster stage1 teleport spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 342.25
+        width: 216.75
+        height: 170.75
+      alignment: 9
+      pivot: {x: 0.42506742, y: 0.53566974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33.25836, y: 63.659393}
+        - {x: -45.25836, y: 13.659393}
+        - {x: -45.25836, y: -60.340607}
+        - {x: -27.258362, y: -80.34061}
+        - {x: 20.741638, y: -80.34061}
+        - {x: 88.74164, y: -21.340607}
+        - {x: 88.74164, y: 63.659393}
+    - name: Slavemaster stage1 teleport spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 172.25
+        width: 216.75
+        height: 170.75
+      alignment: 9
+      pivot: {x: 0.5140499, y: 0.5713395}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -70.54531, y: 60.568787}
+        - {x: -70.54531, y: -22.431213}
+        - {x: -61.54531, y: -62.431213}
+        - {x: -35.54531, y: -50.431213}
+        - {x: -38.54531, y: -39.431213}
+        - {x: -41.54531, y: -36.431213}
+        - {x: -40.54531, y: -35.431213}
+        - {x: -40.54531, y: -29.431213}
+        - {x: -39.54531, y: -37.431213}
+        - {x: -36.54531, y: -41.431213}
+        - {x: -36.54531, y: -45.431213}
+        - {x: -35.54531, y: -48.431213}
+        - {x: -29.545311, y: -74.43121}
+        - {x: -24.545311, y: -83.43121}
+        - {x: 17.454689, y: -83.43121}
+        - {x: 85.45469, y: -46.431213}
+        - {x: 87.45469, y: -41.431213}
+        - {x: 87.45469, y: 53.568787}
+        - {x: 62.45469, y: 60.568787}
+    - name: Slavemaster stage1 teleport spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 172.25
+        width: 216.75
+        height: 170.75
+      alignment: 9
+      pivot: {x: 0.47658363, y: 0.57728446}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 49.5755, y: 59.55368}
+        - {x: -41.4245, y: 59.55368}
+        - {x: -69.4245, y: 49.55368}
+        - {x: -69.4245, y: -15.44632}
+        - {x: -44.4245, y: -49.44632}
+        - {x: -36.4245, y: -54.44632}
+        - {x: -34.4245, y: -47.44632}
+        - {x: -38.4245, y: -36.44632}
+        - {x: -37.4245, y: -25.44632}
+        - {x: -37.4245, y: -38.44632}
+        - {x: -33.4245, y: -48.44632}
+        - {x: -28.4245, y: -75.44632}
+        - {x: -17.4245, y: -84.44632}
+        - {x: 10.5755005, y: -84.44632}
+        - {x: 24.5755, y: -80.44632}
+        - {x: 86.5755, y: -13.44632}
+        - {x: 86.5755, y: 41.55368}
+        - {x: 82.5755, y: 54.55368}
+    - name: Slavemaster stage1 teleport spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 172.25
+        width: 216.75
+        height: 170.75
+      alignment: 9
+      pivot: {x: 0.44380036, y: 0.56539464}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59.318726, y: 61.583862}
+        - {x: -68.318726, y: 48.583862}
+        - {x: -69.318726, y: 45.583862}
+        - {x: -69.318726, y: -14.416138}
+        - {x: -52.318726, y: -46.416138}
+        - {x: -39.318726, y: -51.416138}
+        - {x: -34.318726, y: -49.416138}
+        - {x: -37.318726, y: -38.416138}
+        - {x: -32.318726, y: -44.416138}
+        - {x: -28.318726, y: -73.41614}
+        - {x: -26.318726, y: -82.41614}
+        - {x: 25.681274, y: -82.41614}
+        - {x: 84.681274, y: -38.416138}
+        - {x: 84.681274, y: 61.583862}
+    - name: Slavemaster stage1 teleport spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 172.25
+        width: 216.75
+        height: 170.75
+      alignment: 9
+      pivot: {x: 0.4063345, y: 0.5713395}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 53.802002, y: 60.568787}
+        - {x: -36.197998, y: 60.568787}
+        - {x: -67.198, y: 47.568787}
+        - {x: -68.198, y: 44.568787}
+        - {x: -68.198, y: -15.431213}
+        - {x: -51.197998, y: -47.431213}
+        - {x: -38.197998, y: -52.431213}
+        - {x: -33.197998, y: -50.431213}
+        - {x: -36.197998, y: -39.431213}
+        - {x: -26.197998, y: -74.43121}
+        - {x: -16.197998, y: -83.43121}
+        - {x: 23.802002, y: -83.43121}
+        - {x: 81.802, y: -4.4312134}
+        - {x: 82.802, y: 1.5687866}
+        - {x: 82.802, y: 43.568787}
+    - name: Slavemaster stage1 teleport spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2.25
+        width: 216.75
+        height: 170.75
+      alignment: 9
+      pivot: {x: 0.5140499, y: 0.58917445}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 59.45469, y: 60.52346}
+        - {x: 38.45469, y: 60.52346}
+        - {x: 36.45469, y: 57.52346}
+        - {x: 26.454689, y: 60.52346}
+        - {x: -70.54531, y: 60.52346}
+        - {x: -70.54531, y: -24.47654}
+        - {x: -63.54531, y: -56.47654}
+        - {x: -36.54531, y: -79.47654}
+        - {x: -20.545311, y: -83.47654}
+        - {x: 15.454689, y: -83.47654}
+        - {x: 20.454689, y: -77.47654}
+        - {x: 78.45469, y: -3.4765396}
+        - {x: 78.45469, y: 45.52346}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
