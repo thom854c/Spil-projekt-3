@@ -10,6 +10,7 @@ public class StaticVariables : MonoBehaviour
     private static int mana;
     private static int obtainedCollectables;
     private static Vector2 activeCheckpoint;
+    private static int bossHealth = 15;
 
     public static int MaxHealth = 6, MaxMana;
 
@@ -47,6 +48,12 @@ public class StaticVariables : MonoBehaviour
     {
         get { return mana; }
         set { mana = value; }
+    }
+
+    public static int BossHealth
+    {
+        get { return bossHealth; }
+        set { bossHealth = value; }
     }
 
 }
