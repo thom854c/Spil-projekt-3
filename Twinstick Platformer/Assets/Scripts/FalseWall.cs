@@ -6,16 +6,17 @@ public class FalseWall : MonoBehaviour
 
     public float duration = 1.0f;
 
-
-    public GameObject HideWall;
+    public bool discovered;
 
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        Debug.Log(other.tag);
+        if (other.tag == "Missile")
         {
-            HideWall.SetActive(false);
-
+            discovered = true;
+            GetComponentInChildren<FalseWall>().discovered = true;
+            Destroy(other);
         }
 
     }
@@ -23,12 +24,12 @@ public class FalseWall : MonoBehaviour
 
    public void Update()
     {
-       if (HideWall.gameObject.active == false)
-       {
-        //GetComponent<SpriteRenderer>().color = new Color(0, 0, 0,  Mathf.SmoothStep(maximum, minimum, t));
-        iTween.FadeTo(gameObject,0f,duration);
-       }
 
+       if (discovered)
+       {
+           iTween.FadeTo(gameObject, 0f, duration);
+           GetComponent<BoxCollider2D>().enabled = false;
+       }
        
 
     }

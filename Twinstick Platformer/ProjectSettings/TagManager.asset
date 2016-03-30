@@ -15,6 +15,7 @@ TagManager:
   - Boss
   - Missile
   - Potion
+  - FalseWall
   layers:
   - Default
   - TransparentFX

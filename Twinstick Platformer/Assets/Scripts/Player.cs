@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
         }
         HandleAnimation();
         FireMissile();
-       
+
     }
 
     public void FixedUpdate()
@@ -159,17 +159,42 @@ public class Player : MonoBehaviour
     private void FireMissile()
     {
 
-        if (Input.GetButtonDown(controllerString + "R2") && controller.PointDebugActive.gameObject.active && !hasFired && curMana > 0)
+        if (controllerString == "Microsoft ")
         {
-            Instantiate(MagicMissile, transform.position,
-                Quaternion.Euler(0, 0, Mathf.Rad2Deg*(Mathf.Atan2(controller.pointVector.y, controller.pointVector.x))-90));
-            hasFired = true;
-            curMana --;
-            manaUsedThisFrame = true;
+
+            if (Input.GetAxisRaw(controllerString + "R2") < 0 && controller.PointDebugActive.gameObject.active &&
+                !hasFired && curMana > 0)
+            {
+                Instantiate(MagicMissile, transform.position,
+                    Quaternion.Euler(0, 0,
+                        Mathf.Rad2Deg*(Mathf.Atan2(controller.pointVector.y, controller.pointVector.x)) - 90));
+                hasFired = true;
+                curMana--;
+                manaUsedThisFrame = true;
+            }
+            else if (Input.GetAxisRaw(controllerString + "R2") == 0)
+            {
+                hasFired = false;
+            }
         }
-        else if (Input.GetAxisRaw(controllerString + "R2") == 0)
+        else
         {
-            hasFired = false;
+
+            if (Input.GetButtonDown(controllerString + "R2") && controller.PointDebugActive.gameObject.active &&
+                !hasFired && curMana > 0)
+            {
+                Instantiate(MagicMissile, transform.position,
+                    Quaternion.Euler(0, 0,
+                        Mathf.Rad2Deg*(Mathf.Atan2(controller.pointVector.y, controller.pointVector.x)) - 90));
+                hasFired = true;
+                curMana --;
+                manaUsedThisFrame = true;
+            }
+            else if (!Input.GetButtonDown(controllerString + "R2"))
+            {
+                hasFired = false;
+            }
+
         }
 
     }

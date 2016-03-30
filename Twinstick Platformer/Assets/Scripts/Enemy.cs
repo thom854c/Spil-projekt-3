@@ -141,7 +141,6 @@ public class Enemy : MonoBehaviour
         if (Attacking && attackColdown < 0)
         {
                 GetComponent<Animator>().SetBool("Attacking", true);
-                AttackSound.Play();
                 attackColdown = 2;
             playerHealth = StaticVariables.PlayerHealth;
 
