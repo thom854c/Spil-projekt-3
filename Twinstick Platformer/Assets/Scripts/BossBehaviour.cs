@@ -6,17 +6,20 @@ using UnityEngine.SceneManagement;
 public class BossBehaviour : MonoBehaviour
 {
     private int phase, startHealth, attacksFired = 1;
-    private float fireCooldown, cycleTime, spawnTime;
+    private float fireCooldown, cycleTime, spawnTime, fadeTime;
     private Animator anim;
     public float MaxCycleLenght, FireSpeed;
-    public GameObject TPPoint1, TPPoint2, TPPoint3, Missile;
+    public GameObject TPPoint1, TPPoint2, TPPoint3, Missile, UI;
     public bool FireMissleStar, ResetCycleTime, TeleportNow, Die;
+    private bool isDead = false;
+    public Texture2D Black;
 	void Start ()
 	{
 	    startHealth = StaticVariables.BossHealth;
 	    anim = GetComponent<Animator>();
 	    transform.parent.position = TPPoint1.transform.position;
 	    StaticVariables.ResetBoss = false;
+        iTween.CameraFadeAdd(Black);
 	}
 	
 
@@ -70,10 +73,25 @@ public class BossBehaviour : MonoBehaviour
             anim.SetBool("StartFire", false);
             anim.SetInteger("Phase",1);
             anim.SetBool("Dying", true);
+
         }
-        if (Die)
+
+
+        if (Die && !isDead)
         {
-            Destroy(gameObject);
+            UI.SetActive(false);
+            iTween.CameraFadeTo(100,20);
+            fadeTime = 2;
+            isDead = true;
+        }
+        if (isDead && fadeTime< 0)
+        {
+            Debug.Log("loaded");
+            SceneManager.LoadScene(0);
+        }
+        if (isDead)
+        {
+            fadeTime -= Time.deltaTime;
         }
     }
 

@@ -35,6 +35,7 @@ public class Enemy : MonoBehaviour
         if (StaticVariables.EnemyHealth <= 0)
         {
             DieSound.Play();
+            StaticVariables.EnemyHealth = 1000;
             GetComponent<SpriteRenderer>().enabled = false;
         }
 
@@ -48,7 +49,6 @@ public class Enemy : MonoBehaviour
         }
         passiveSoundColdown += Random.Range(0.2f, 1.2f) * Time.deltaTime;
 
-        Debug.Log(StaticVariables.EnemyHealth);
 
     }
 
@@ -150,7 +150,7 @@ public class Enemy : MonoBehaviour
         {
             GetComponent<Animator>().SetBool("Attacking", false);
         }
-        if (AttackFinished)
+        if (AttackFinished && !DieSound.isPlaying)
         {
             StaticVariables.PlayerHealth = playerHealth-1;
             GetComponent<Animator>().SetBool("Attacking", false);

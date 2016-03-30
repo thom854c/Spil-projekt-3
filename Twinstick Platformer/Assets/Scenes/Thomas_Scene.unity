@@ -162,6 +162,10 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &19522681 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 181834, guid: f35f4cb0367b9e84491bf31275458ff0, type: 2}
+  m_PrefabInternal: {fileID: 524504261}
 --- !u!1 &42381331
 GameObject:
   m_ObjectHideFlags: 0
@@ -3815,6 +3819,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11451508, guid: 78d91288d8d7c9c4d81cac97e8a413f4, type: 2}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 19522681}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78d91288d8d7c9c4d81cac97e8a413f4, type: 2}
   m_IsPrefabParent: 0
