@@ -92,6 +92,7 @@ public class BossBehaviour : MonoBehaviour
         }
         if (isDead && fadeTime< 0)
         {
+            StaticVariables.BossHealth = startHealth;
             Debug.Log("loaded");
             SceneManager.LoadScene(0);
         }
@@ -103,13 +104,11 @@ public class BossBehaviour : MonoBehaviour
         if (StaticVariables.PlayerHealth <= 0)
         {
             GameObject.Find("Player").GetComponent<Player>().DeadSound.enabled = true;
-            Debug.Log("spil");
 
         }
 
         if (GameObject.Find("Player").GetComponent<Player>().DeadSound.isPlaying)
         {
-            Debug.Log(deathDelay);
             deathDelay -= Time.deltaTime;
         }
         else if (deathDelay < 2)
