@@ -12,6 +12,7 @@ public class MainMenuScript : MonoBehaviour
     private bool _isAudioOptions = false;
     private bool _isGraphicsOptions = false;
     private bool _isNewGameMenu = false;
+    private bool _isControllMenu = false;
 
     //private string _playerName = "";
     //private string _playerGender = "";
@@ -23,6 +24,7 @@ public class MainMenuScript : MonoBehaviour
     public Camera gameCamera;
 
     public Texture2D ChantOfChaos;
+    public Texture2D Controlls;
     public Texture2D Window;
     public Texture2D WindowWall;
     public Texture2D Wall;
@@ -71,12 +73,14 @@ public class MainMenuScript : MonoBehaviour
         NewGameOptions();
         AudioOptionsDisplay();
         GraphicsOptionsDisplay();
+        ControllMenu();
 
         GUI.DrawTexture(new Rect(Screen.width / 2 - 220, Screen.height / 2 -330, 420, 300), ChantOfChaos);
+        //GUI.DrawTexture(new Rect(Screen.width / 2 - 660, Screen.height / 2 - 335, 400, 250), Controlls);
 
 
 
-        if (_isLevelSelectMenu == true || _isLoadGameMenu == true || _isOptionsMenu == true || _isNewGameMenu == true) 
+        if (_isLevelSelectMenu == true || _isLoadGameMenu == true || _isOptionsMenu == true || _isNewGameMenu == true || _isControllMenu == true) 
         {
             if (GUI.Button(new Rect(10, Screen.height - 35, 140, 30), " Back", "Button Style")) 
             {
@@ -86,6 +90,7 @@ public class MainMenuScript : MonoBehaviour
                 _isNewGameMenu = false;
                 _isAudioOptions = false;
                 _isGraphicsOptions = false;
+                _isControllMenu = false;
 
                 _isFirstMenu = true;
             }
@@ -98,15 +103,21 @@ public class MainMenuScript : MonoBehaviour
     {
         if (_isFirstMenu) 
         {
-            if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 10, 200, 70), " New Game", "Button Style")) 
+            if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 20, 200, 70), " New Game", "Button Style")) 
             {
                 Application.LoadLevel(1);
             }
 
-            if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 90, 200, 70), " Level Select", "Button Style"))
+            if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 60, 200, 70), " Level Select", "Button Style"))
             {
                 _isFirstMenu = false;
                 _isLevelSelectMenu = true;
+            }
+
+            if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 140, 200, 70), " Controlls", "Button Style"))
+            {
+                _isFirstMenu = false;
+                _isControllMenu = true;
             }
 
             /*if (GUI.Button(new Rect(Screen.width / 2 - 50, Screen.height / 2 + 55, 160, 50), " Audio", "Button Style"))
@@ -115,7 +126,7 @@ public class MainMenuScript : MonoBehaviour
                 _isOptionsMenu = true;
             }*/
 
-            if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 170, 200, 70), " Quit Game", "Button Style"))
+            if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 220, 200, 70), " Quit Game", "Button Style"))
             {
                 Application.Quit();
             }
@@ -196,17 +207,17 @@ public class MainMenuScript : MonoBehaviour
         if (_isLevelSelectMenu) 
         {
             // Top Buttons. 1x4
-            if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 10, 200, 70), " Level 01", "Button Style"))
+            if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 10, 200, 70), " Level 01", "Level Select 1"))
             {
                 Application.LoadLevel(1);
             }
 
-            if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 90, 200, 70), " Level 02", "Button Style"))
+            if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 90, 200, 70), " Level 02", "Level Select 2"))
             {
                 Application.LoadLevel(2);
             }
 
-            if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 170, 200, 70), " Boss", "Button Style"))
+            if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 170, 200, 70), " Boss", "Level Select 3"))
             {
                 Application.LoadLevel(3);
             }
@@ -236,6 +247,14 @@ public class MainMenuScript : MonoBehaviour
             {
 
             }*/
+        }
+    }
+
+    void ControllMenu()
+    {
+        if (_isControllMenu)
+        {
+            GUI.DrawTexture(new Rect(Screen.width / 2 - 300, Screen.height / 2 - 25, 600, 350), Controlls);
         }
     }
 

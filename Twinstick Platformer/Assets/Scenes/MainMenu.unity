@@ -1072,6 +1072,7 @@ MonoBehaviour:
   GameSkin: {fileID: 11400000, guid: b6ee11cc74181464ebdbd24e235a94b5, type: 2}
   gameCamera: {fileID: 230064668}
   ChantOfChaos: {fileID: 2800000, guid: dbafde66144ea6e46bced159995eff1c, type: 3}
+  Controlls: {fileID: 2800000, guid: b3a22623c05e71a41a01305dc74b6c18, type: 3}
   Window: {fileID: 2800000, guid: ced59fab16269e444bda86d2ad6a433d, type: 3}
   WindowWall: {fileID: 2800000, guid: 0c67de706d29a9b429c5f430a142dbbb, type: 3}
   Wall: {fileID: 2800000, guid: ee61021e9bdbb09498e6e4f983001f70, type: 3}
@@ -4767,7 +4768,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1050582278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40, y: -34.54, z: 0}
+  m_LocalPosition: {x: 40, y: -34.54, z: -1}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7488,7 +7489,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1863193528}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40, y: -34.54, z: 0}
+  m_LocalPosition: {x: -40, y: -34.54, z: -1}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
