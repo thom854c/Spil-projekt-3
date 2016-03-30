@@ -11,9 +11,10 @@ public class HeartsScript : MonoBehaviour
     public List<GameObject> Hearts;
     
     //Used for calculating heart position 
-    public float HeartsCircleRadius;
     public float AngleIncrease;
     public float StartAngle;
+
+    private float HeartsCircleRadius;
 
     //Number of Hearts the player has (value will probably come from another script)
     public int HeartNumber;
@@ -30,7 +31,7 @@ public class HeartsScript : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-        HeartsCircleRadius = Screen.width / 14;
+        HeartsCircleRadius = Screen.width / 16;
 
 	}
 	

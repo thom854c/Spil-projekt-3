@@ -33,7 +33,7 @@ public class CrystalsScript : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-        CrystalsCircleRadius = Screen.width/14;
+        CrystalsCircleRadius = Screen.width/16;
         //Max_Mana = GetComponent<Player>().MaxMana;
         //Cur_Mana = GetComponent<Player>().curMana;
 	}
