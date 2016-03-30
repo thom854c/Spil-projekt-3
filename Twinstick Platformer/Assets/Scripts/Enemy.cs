@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
     private CharacterController2D controller;
     [HideInInspector] public bool MoveLeft, MoveRight, JumpAfterPlayer,JumpRight, Attacking, ApproachingDeath, AttackFinished;
     public bool ChasePlayer;
-    public int MoveSpeed ;
+    public int MoveSpeed, EnemyHealth=3 ;
     public float PatrolLenght;
     private float delay, startPatrolTime, turnColdown, attackColdown, passiveSoundColdown, dieDelay=3;
     [HideInInspector]public float PatrolTime;
@@ -31,10 +31,9 @@ public class Enemy : MonoBehaviour
         }
         Patrol();
         Attack();
-        if (StaticVariables.EnemyHealth <= 0)
+        if (EnemyHealth <= 0)
         {
             DieSound.Play();
-            StaticVariables.EnemyHealth = 1000;
             //GetComponent<SpriteRenderer>().enabled = false;
         }
 
