@@ -2060,6 +2060,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11466940, guid: f35f4cb0367b9e84491bf31275458ff0, type: 2}
+      propertyPath: MagicMissile
+      value: 
+      objectReference: {fileID: 154742, guid: 46b10bcaf8b125d418e398e5a3005e95, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f35f4cb0367b9e84491bf31275458ff0, type: 2}
   m_IsPrefabParent: 0
