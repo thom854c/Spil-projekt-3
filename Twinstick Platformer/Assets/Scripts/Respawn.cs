@@ -45,7 +45,10 @@ public class Respawn : MonoBehaviour
         if (playerMortal)
         {
             GameObject.Find("Player").GetComponent<Player>().DeadSound.enabled = true;
-
+            transform.position = savedCheckpoint.transform.position;
+            StaticVariables.PlayerHealth = StaticVariables.MaxHealth;
+            GetComponent<Player>().curMana = GetComponent<Player>().MaxMana;
+            playerMortal = false;
         }
         if (GameObject.Find("Player").GetComponent<Player>().DeadSound.isPlaying)
         {
@@ -54,10 +57,7 @@ public class Respawn : MonoBehaviour
         }
         else if (soundDelay < 2)
         {
-            transform.position = savedCheckpoint.transform.position;
-            StaticVariables.PlayerHealth = StaticVariables.MaxHealth;
-            GetComponent<Player>().curMana = GetComponent<Player>().MaxMana;
-            playerMortal = false;
+            GameObject.Find("Player").GetComponent<Player>().DeadSound.enabled = false;
             soundDelay = 2;
         }
         
