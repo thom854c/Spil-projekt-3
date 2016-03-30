@@ -4,25 +4,15 @@ using System.Collections;
 public class Enemy : MonoBehaviour
 {
     private CharacterController2D controller;
-    [HideInInspector] public bool MoveLeft;
-    [HideInInspector] public bool MoveRight;
-    [HideInInspector] public bool JumpAfterPlayer;
-    [HideInInspector] public bool JumpRight;
-    [HideInInspector] public bool Attacking = false;
-    [HideInInspector] public bool ApproachingDeath; 
+    [HideInInspector] public bool MoveLeft, MoveRight, JumpAfterPlayer,JumpRight, Attacking = false, ApproachingDeath;
     public bool ChasePlayer;
-    public int Health = 3;
-    public int MoveSpeed;
+    public int Health = 3,MoveSpeed ;
     public float PatrolLenght;
-    private float delay;
+    private float delay, startPatrolTime, turnColdown, attackColdown, passiveSoundColdown;
     [HideInInspector]public float PatrolTime;
-    private float startPatrolTime;
-    private int patrolSpeed;
-    private int direktion = 1;
-    private float turnColdown;
-    private float attackColdown;
-
-
+    private int patrolSpeed, direktion = 1;
+    public AudioSource AttackSound,DieSound, PassiveSound;
+    private bool wasPlaying;
 
 
     public void Start()
@@ -45,6 +35,16 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (DieSound.isPlaying)
+        {
+            wasPlaying = true;
+        }
+        else if (wasPlaying)
+        {
+            Destroy(gameObject);
+        }
+        passiveSoundColdown += Random.Range(0.2f, 1.2f) * Time.deltaTime;
 
     }
 
@@ -121,6 +121,13 @@ public class Enemy : MonoBehaviour
             patrolSpeed = -MoveSpeed;
             direktion = -1;
         }
+
+        if (passiveSoundColdown> 20)
+        {
+            
+            PassiveSound.Play();
+            passiveSoundColdown = 0;
+        }
     }
 
     bool attacked = false;
@@ -139,6 +146,7 @@ public class Enemy : MonoBehaviour
             attackColdown -= Time.deltaTime;
             if (attackColdown < 0.5f && !attacked && Attacking)
             {
+                AttackSound.Play();
                 StaticVariables.PlayerHealth --;
                 attacked = true;
             }

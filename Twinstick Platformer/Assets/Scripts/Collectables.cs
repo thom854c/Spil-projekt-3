@@ -10,7 +10,11 @@ public class Collectables : MonoBehaviour
         if (other.tag == "Player" && gameObject.tag == "Collectable")
         {
             StaticVariables.ObtainedCollectables ++;
-            Debug.Log(StaticVariables.ObtainedCollectables);
+            Destroy(gameObject);
+        }
+        else if (other.tag == "Player" && gameObject.tag == "Potion")
+        {
+            StaticVariables.PlayerHealth += 4;
             Destroy(gameObject);
         }
 

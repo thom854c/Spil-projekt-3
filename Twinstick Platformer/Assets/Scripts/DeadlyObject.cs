@@ -4,7 +4,9 @@ using System.Collections;
 public class DeadlyObject : MonoBehaviour
 {
 
-
+    float respawnTime;
+    bool isDead;
+    
 
 	// Use this for initialization
 	void Start ()
@@ -13,22 +15,42 @@ public class DeadlyObject : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () 
-    {
-	
+	void Update ()
+	{
+	    respawnTime -= Time.deltaTime;
+        if (gameObject.name == "Pit" && respawnTime < 0 && isDead)
+        {
+
+            StaticVariables.ResetBoss = true;
+            StaticVariables.PlayerHealth = StaticVariables.MaxHealth;
+            GameObject.Find("Player").transform.position = StaticVariables.ActiveCheckpoint;
+            isDead = false;
+        }
+        else if (respawnTime < 0 && isDead)
+        {
+            StaticVariables.PlayerHealth = StaticVariables.MaxHealth;
+            GameObject.Find("Player").transform.position = StaticVariables.ActiveCheckpoint;
+            isDead = false;
+        }
 	}
 
     void OnTriggerEnter2D(Collider2D other)
     {
         switch (other.tag)
         {
+                
             case "Player":
-                other.transform.position = StaticVariables.ActiveCheckpoint;
+                respawnTime = 5;
+                isDead = true;
                 break;
 
             case "PlayerDetector":
                 break;
             case "Orb":
+                break;
+            case "Enemy":
+                other.GetComponent<Enemy>().DieSound.Play();
+                other.GetComponent<SpriteRenderer>().enabled = false;
                 break;
             default:
                 Destroy(other.gameObject);
