@@ -1,18 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &153070
+--- !u!1 &189100
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 496322}
-  - 20: {fileID: 2005172}
-  - 92: {fileID: 9258060}
-  - 124: {fileID: 12445366}
-  - 81: {fileID: 8143274}
-  - 114: {fileID: 11463728}
+  - 4: {fileID: 408334}
+  - 20: {fileID: 2094796}
+  - 92: {fileID: 9281218}
+  - 124: {fileID: 12435972}
+  - 81: {fileID: 8198656}
+  - 114: {fileID: 11488346}
+  - 82: {fileID: 8212474}
   m_Layer: 0
   m_Name: Gameplay Camera
   m_TagString: MainCamera
@@ -20,24 +21,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &496322
+--- !u!4 &408334
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 153070}
+  m_GameObject: {fileID: 189100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 32, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!20 &2005172
+--- !u!20 &2094796
 Camera:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 153070}
+  m_GameObject: {fileID: 189100}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -66,44 +67,118 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
---- !u!81 &8143274
+--- !u!81 &8198656
 AudioListener:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 153070}
+  m_GameObject: {fileID: 189100}
   m_Enabled: 1
---- !u!92 &9258060
+--- !u!82 &8212474
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189100}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 55fa817d5f5bc9b4db39cc7bc90bc7fc, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.35
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!92 &9281218
 Behaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 153070}
+  m_GameObject: {fileID: 189100}
   m_Enabled: 1
---- !u!114 &11463728
+--- !u!114 &11488346
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 153070}
+  m_GameObject: {fileID: 189100}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a49f7dacc25b6d044a03ecf4aa9a0c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraStartX: -40
-  cameraEndX: 20
-  cameraLengthFromplayerX: 8
+  cameraStartX: 0
+  cameraEndX: 150
+  cameraLengthFromplayerX: 0
   cameraStartY: 32
-  cameraEndY: 80
+  cameraEndY: 40
   cameraLengthFromplayerYUp: 0
-  cameraLengthFromplayerYDown: 10
---- !u!124 &12445366
+  cameraLengthFromplayerYDown: 0
+--- !u!124 &12435972
 Behaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 153070}
+  m_GameObject: {fileID: 189100}
   m_Enabled: 1
 --- !u!1001 &100100000
 Prefab:
@@ -113,10 +188,14 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
-      propertyPath: m_CullingMask.m_Bits
-      value: 4294966783
+      propertyPath: m_Volume
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: BypassReverbZones
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 153070}
+  m_RootGameObject: {fileID: 189100}
   m_IsPrefabParent: 1

@@ -5,7 +5,7 @@ using System.Collections;
 public class Player : MonoBehaviour
 {
 
-    private bool isFacingRight;
+    private bool isFacingRight, hasFired;
     private CharacterController2D controller;
 
 
@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     public int curMana, MaxMana, pushManaCost;
     public bool canPoint = true, manaUsedThisFrame = false;
     public Animator anim;
+    public GameObject MagicMissile;
 
     public float manaTimer, manaRecharceTimer;
     private string controllerString;
@@ -56,6 +57,8 @@ public class Player : MonoBehaviour
             controller.PointAndPush(Input.GetAxis(controllerString + "RS Horizontal"), Input.GetAxis(controllerString + "RS Vertical"), Input.GetButton(controllerString + "Push"), Input.GetButtonDown(controllerString + "Push"));
         }
         HandleAnimation();
+        FireMissile();
+       
     }
 
     public void FixedUpdate()
@@ -151,5 +154,23 @@ public class Player : MonoBehaviour
         }
 
        anim.SetBool("onGround", controller.State.IsGrounded);
+    }
+
+    private void FireMissile()
+    {
+
+        if (Input.GetAxisRaw(controllerString + "R2")<0 && controller.PointDebugActive.gameObject.active && !hasFired && curMana > 0)
+        {
+            Instantiate(MagicMissile, transform.position,
+                Quaternion.Euler(0, 0, Mathf.Rad2Deg*(Mathf.Atan2(controller.pointVector.y, controller.pointVector.x))-90));
+            hasFired = true;
+            curMana --;
+            manaUsedThisFrame = true;
+        }
+        else if (Input.GetAxisRaw(controllerString + "R2") == 0)
+        {
+            hasFired = false;
+        }
+
     }
 }

@@ -227,6 +227,7 @@ MonoBehaviour:
     JumpMagnitude: 40
     DisableAllMovement: 0
     DisableControls: 0
+  pointVector: {x: 0, y: 0}
   PointDebugInactive: {fileID: 190396}
   PointDebugActive: {fileID: 112966}
   PointSensitivity: 0.3
@@ -261,6 +262,7 @@ MonoBehaviour:
   canPoint: 1
   manaUsedThisFrame: 0
   anim: {fileID: 0}
+  MagicMissile: {fileID: 141106, guid: 16bbdc05186c4334ba893a6c06f96e9c, type: 2}
   manaTimer: 0
   manaRecharceTimer: 0
 --- !u!212 &21222462
@@ -359,7 +361,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: MagicMissile
+      value: 
+      objectReference: {fileID: 141106, guid: 16bbdc05186c4334ba893a6c06f96e9c, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 181834}

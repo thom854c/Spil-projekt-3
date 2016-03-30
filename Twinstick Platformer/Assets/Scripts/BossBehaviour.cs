@@ -10,7 +10,7 @@ public class BossBehaviour : MonoBehaviour
     private Animator anim;
     public float MaxCycleLenght, FireSpeed;
     public GameObject TPPoint1, TPPoint2, TPPoint3, Missile;
-    public bool FireMissleStar, ResetCycleTime, TeleportNow;
+    public bool FireMissleStar, ResetCycleTime, TeleportNow, Die;
 	void Start ()
 	{
 	    startHealth = StaticVariables.BossHealth;
@@ -33,13 +33,11 @@ public class BossBehaviour : MonoBehaviour
             case 3:
                 Phase3();
                 break;
+            default:
+                break;
 	    }
 	    cycleTime += Time.deltaTime;
-	    if (Input.GetKeyDown(KeyCode.K))
-	    {
-	        StaticVariables.BossHealth -= 6;
-            
-	    }
+
 	    if (ResetCycleTime)
 	    {
 	        cycleTime = 0;
@@ -47,6 +45,7 @@ public class BossBehaviour : MonoBehaviour
 	    }
 	    MissileStar();
         Teleport();
+        Reset();
     }
 
     void HandleHealth()
@@ -64,6 +63,14 @@ public class BossBehaviour : MonoBehaviour
             phase = 3;
         }
         else
+        {
+            phase = 0;
+            anim.SetBool("Teleport", false);
+            anim.SetBool("StartFire", false);
+            anim.SetInteger("Phase",1);
+            anim.SetBool("Dying", true);
+        }
+        if (Die)
         {
             Destroy(gameObject);
         }
@@ -170,6 +177,22 @@ public class BossBehaviour : MonoBehaviour
             anim.SetBool("Teleport", false);
         }
 
+
+    }
+
+    void Reset()
+    {
+        if (StaticVariables.ResetBoss)
+        {
+            StaticVariables.BossHealth = startHealth;
+            anim.SetBool("Teleport", false);
+            anim.SetBool("StartFire", false);
+            anim.SetInteger("Phase", 1);
+            anim.SetBool("Dying", false);
+            transform.parent.position = TPPoint1.transform.position;
+            StaticVariables.ResetBoss = false;
+            
+        }
 
     }
 }

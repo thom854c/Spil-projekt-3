@@ -14,6 +14,7 @@ TagManager:
   - Trap
   - Boss
   - Missile
+  - Potion
   layers:
   - Default
   - TransparentFX

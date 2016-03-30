@@ -19,7 +19,6 @@ public class CharacterController2D : MonoBehaviour
     public ControllerParameters2D Parameters { get { return overrideParameters ?? DefaultParameters; } }
     public GameObject StandingOn { get; private set; }
 
-
     public bool CanJump
     {
         get
@@ -54,7 +53,7 @@ public class CharacterController2D : MonoBehaviour
         horizontalDistanceBetweenRays;
 
     // AddOn Pointing Variables
-    private Vector2 pointVector;
+    public Vector2 pointVector;
     public GameObject PointDebugInactive, PointDebugActive;
 
     public float PointSensitivity = 0.3f, PointInactiveLenght = 3, PointActiveLength = 5, PushFrequency, PushMagnitude = 50;
