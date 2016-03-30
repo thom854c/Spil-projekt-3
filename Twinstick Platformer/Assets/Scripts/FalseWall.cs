@@ -29,6 +29,14 @@ public class FalseWall : MonoBehaviour
        {
            iTween.FadeTo(gameObject, 0f, duration);
            GetComponent<BoxCollider2D>().enabled = false;
+     
+           foreach (Transform child in transform)
+           {
+               if (child.gameObject.GetComponent<BoxCollider2D>() != null)
+               {
+                   child.gameObject.GetComponent<BoxCollider2D>().enabled = false;    
+               }
+           }
        }
        
 
