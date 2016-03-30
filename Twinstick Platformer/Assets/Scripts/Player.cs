@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     private bool isFacingRight, hasFired;
     private CharacterController2D controller;
 
-
+    
     public float MaxSpeed = 8;
     public float SpeedAccelerationOnGround = 10f;
     public float SpeedAccelerationInAir = 5f;
@@ -17,9 +17,10 @@ public class Player : MonoBehaviour
     public bool canPoint = true, manaUsedThisFrame = false;
     public Animator anim;
     public GameObject MagicMissile;
-    public AudioSource MissileSound, HitSound, LowHPSound, DeadSound;
+    public AudioSource MissileSound, HitSound, LowHPSound, DeadSound, JumpSound, WalkSound;
     public float manaTimer, manaRecharceTimer;
     private string controllerString;
+    private bool OnGroundLastFrame;
 
     public void Start()
     {
@@ -59,7 +60,7 @@ public class Player : MonoBehaviour
         HandleAnimation();
         FireMissile();
         HealthSounds();
-
+        LandSound();
 
     }
 
@@ -214,5 +215,21 @@ public class Player : MonoBehaviour
             LowHPSound.enabled = false;
         }
 
+    }
+
+    private void LandSound()
+    {
+
+        if (controller.State.IsGrounded && !OnGroundLastFrame)
+        {
+            JumpSound.Play();
+        }
+        OnGroundLastFrame = controller.State.IsGrounded;
+    }
+
+
+    private void WalkSoundPlay()
+    {
+        WalkSound.Play();
     }
 }
