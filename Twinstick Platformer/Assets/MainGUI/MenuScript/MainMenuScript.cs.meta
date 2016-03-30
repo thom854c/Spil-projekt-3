@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 78a1acdfcc1186f4993e06f36f7053bc
+timeCreated: 1458295469
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - GameSkin: {instanceID: 0}
+  - gameCamera: {instanceID: 0}
+  - ChantOfChaos: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
