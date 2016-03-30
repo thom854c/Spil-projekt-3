@@ -1,0 +1,285 @@
+fileFormatVersion: 2
+guid: 99330cfea9b6ff1469e3f56822d6f8f2
+timeCreated: 1459339560
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Slavemaster attack_0
+    21300002: Slavemaster attack_1
+    21300004: Slavemaster attack_2
+    21300006: Slavemaster attack_3
+    21300008: Slavemaster attack_4
+    21300010: Slavemaster attack_5
+    21300012: Slavemaster attack_6
+    21300014: Slavemaster attack_7
+    21300016: Slavemaster attack_8
+    21300018: Slavemaster attack_9
+    21300020: Slavemaster attack_10
+    21300022: Slavemaster attack_11
+    21300024: Slavemaster attack_12
+    21300026: Slavemaster attack_13
+    21300028: Slavemaster attack_14
+    21300030: Slavemaster attack_15
+    21300032: Slavemaster attack_16
+    21300034: Slavemaster attack_17
+    21300036: Slavemaster attack_18
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 16
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Slavemaster attack_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 215
+        width: 28
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45973828}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Slavemaster attack_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 215
+        width: 27
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.54529315}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Slavemaster attack_2
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 215
+        width: 27
+        height: 25
+      alignment: 9
+      pivot: {x: 0.52684075, y: 0.5144934}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Slavemaster attack_3
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 215
+        width: 26
+        height: 26
+      alignment: 9
+      pivot: {x: 0.4721269, y: 0.48606285}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Slavemaster attack_4
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 214
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Slavemaster attack_5
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 213
+        width: 26
+        height: 28
+      alignment: 9
+      pivot: {x: 0.4721269, y: 0.5129405}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Slavemaster attack_6
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 215
+        width: 23
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5157537, y: 0.5144934}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Slavemaster attack_7
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 212
+        width: 22
+        height: 29
+      alignment: 9
+      pivot: {x: 0.56588054, y: 0.537484}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Slavemaster attack_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 148
+        width: 28
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5517642, y: 0.5647049}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Slavemaster attack_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 148
+        width: 28
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5241557}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Slavemaster attack_10
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 148
+        width: 27
+        height: 29
+      alignment: 9
+      pivot: {x: 0.47315922, y: 0.54997885}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Slavemaster attack_11
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 149
+        width: 29
+        height: 25
+      alignment: 9
+      pivot: {x: 0.48750517, y: 0.60145754}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Slavemaster attack_12
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 154
+        width: 28
+        height: 21
+      alignment: 9
+      pivot: {x: 0.55176437, y: 0.4827445}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Slavemaster attack_13
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 149
+        width: 29
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5624737, y: 0.52588165}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Slavemaster attack_14
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 150
+        width: 28
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5258822, y: 0.48657906}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Slavemaster attack_15
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 149
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5874634, y: 0.4999995}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Slavemaster attack_16
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 86
+        width: 25
+        height: 27
+      alignment: 9
+      pivot: {x: 0.57246995, y: 0.5268405}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Slavemaster attack_17
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 85
+        width: 29
+        height: 29
+      alignment: 9
+      pivot: {x: 0.46251547, y: 0.51249456}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Slavemaster attack_18
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 87
+        width: 30
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3550598, y: 0.41545156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
