@@ -1,23 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Respawn : MonoBehaviour 
+public class Respawn : MonoBehaviour
 {
-	
+
     public GameObject savedCheckpoint;
     public float lowerDeath = 4;
     public bool playerMortal;
     public float deathDelay;
     float deathTimer, soundDelay = 2;
-// Use this for initialization
-	void Start () 
+    bool dying;
+    // Use this for initialization
+    void Start()
     {
         //Sætter startvectoren til checkpointed
 
-	}
-	
-	// Update is called once per frame
-	void Update () 
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         if (transform.position.y < lowerDeath)
         {
@@ -31,14 +32,13 @@ public class Respawn : MonoBehaviour
                 playerMortal = true;
                 deathTimer = 0;
             }
-        
-        }
 
-        if (StaticVariables.PlayerHealth == 0)
+        }
+        if (StaticVariables.PlayerHealth == 0 || dying)
         {
             Die();
         }
-	}
+    }
 
     void Die()
     {
@@ -49,6 +49,7 @@ public class Respawn : MonoBehaviour
             StaticVariables.PlayerHealth = StaticVariables.MaxHealth;
             GetComponent<Player>().curMana = GetComponent<Player>().MaxMana;
             playerMortal = false;
+            dying = false;
         }
         if (GameObject.Find("Player").GetComponent<Player>().DeadSound.isPlaying)
         {
@@ -57,10 +58,11 @@ public class Respawn : MonoBehaviour
         }
         else if (soundDelay < 2)
         {
+
             GameObject.Find("Player").GetComponent<Player>().DeadSound.enabled = false;
             soundDelay = 2;
         }
-        
+
     }
 
     void OnTriggerEnter2D(Collider2D other) //Tjekker for at se om gameobjekted kolliderer med et bestemt andet objekt
@@ -70,7 +72,7 @@ public class Respawn : MonoBehaviour
         {
             //Ændre positionen på den nyeste vectorposition til at være den samme som gameobjektet
             savedCheckpoint = other.gameObject;
-           // GameVariables.newestCheckPoint = transform.position;
+            // GameVariables.newestCheckPoint = transform.position;
             Debug.Log("Saved");
 
 
@@ -79,7 +81,7 @@ public class Respawn : MonoBehaviour
         if (other.tag == "Trap")
         {
             //Ændre positionen på det kolliderende objekt til den sidste registrede checkpoint possition
-            Die();
+            dying = true;
             Debug.Log("Trigger");
         }
     }

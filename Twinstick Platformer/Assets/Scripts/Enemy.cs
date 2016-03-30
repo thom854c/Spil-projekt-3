@@ -8,11 +8,10 @@ public class Enemy : MonoBehaviour
     public bool ChasePlayer;
     public int MoveSpeed ;
     public float PatrolLenght;
-    private float delay, startPatrolTime, turnColdown, attackColdown, passiveSoundColdown;
+    private float delay, startPatrolTime, turnColdown, attackColdown, passiveSoundColdown, dieDelay=3;
     [HideInInspector]public float PatrolTime;
     private int patrolSpeed, direktion = 1, playerHealth;
     public AudioSource AttackSound,DieSound, PassiveSound;
-    private bool wasPlaying;
 
 
     public void Start()
@@ -36,14 +35,14 @@ public class Enemy : MonoBehaviour
         {
             DieSound.Play();
             StaticVariables.EnemyHealth = 1000;
-            GetComponent<SpriteRenderer>().enabled = false;
+            //GetComponent<SpriteRenderer>().enabled = false;
         }
 
         if (DieSound.isPlaying)
         {
-            wasPlaying = true;
+            dieDelay -= Time.deltaTime;
         }
-        else if (wasPlaying)
+        if (dieDelay < 0)
         {
             Destroy(gameObject);
         }
