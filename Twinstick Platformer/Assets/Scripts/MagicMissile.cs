@@ -21,7 +21,7 @@ public class MagicMissile : MonoBehaviour
                 Destroy(gameObject);
                 break;
             case "Enemy":
-                StaticVariables.EnemyHealth --;
+                other.GetComponent<Enemy>().EnemyHealth --;
                 Destroy(gameObject);
                 break;
             case "Player":
