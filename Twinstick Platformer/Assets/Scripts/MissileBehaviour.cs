@@ -41,6 +41,8 @@ public class MissileBehaviour : MonoBehaviour
                 break;
             case "Potion":
                 break;
+            case "Platform":
+                break;
             default:
                 Destroy(gameObject);
                 break;

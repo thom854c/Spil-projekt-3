@@ -17,6 +17,7 @@ TagManager:
   - Potion
   - FalseWall
   - Music
+  - Platform
   layers:
   - Default
   - TransparentFX

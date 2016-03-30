@@ -33,6 +33,7 @@ public class Enemy : MonoBehaviour
         Attack();
         if (EnemyHealth <= 0)
         {
+            EnemyHealth = 10;
             DieSound.Play();
             //GetComponent<SpriteRenderer>().enabled = false;
         }
