@@ -8,6 +8,8 @@ public class SpriteChanger : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    public AudioSource lyd;
+
     private GameObject[] checkPoints;
 
 	// Use this for initialization
@@ -25,6 +27,7 @@ public class SpriteChanger : MonoBehaviour
         {
             ChangeSprite();
             Debug.Log("gotcha");
+            
         }
     }
 
@@ -34,6 +37,8 @@ public class SpriteChanger : MonoBehaviour
         {
             spriteRenderer.sprite = checkpointActive;
             DisableOtherCheckPoints();
+            lyd.Play();
+
         }
 
     }

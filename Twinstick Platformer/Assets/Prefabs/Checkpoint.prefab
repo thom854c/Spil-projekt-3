@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21287276}
   - 61: {fileID: 6130924}
   - 114: {fileID: 11440764}
+  - 82: {fileID: 8282686}
   m_Layer: 0
   m_Name: Checkpoint
   m_TagString: CheckPoint
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 208.54196, y: 81.32753, z: 0}
+  m_LocalPosition: {x: 75, y: 13.3, z: 0}
   m_LocalScale: {x: 0.25969717, y: 0.25969717, z: 0.25969717}
   m_Children: []
   m_Father: {fileID: 0}
@@ -44,6 +45,80 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 20, y: 20}
+--- !u!82 &8282686
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142838}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a53743d4110c2a749885c01ff5999633, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.099
+  m_Pitch: 0.81
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11440764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57,6 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkpointFaded: {fileID: 21300000, guid: b59cf9a32b17c2c4783ec9647e76c1cc, type: 3}
   checkpointActive: {fileID: 21300000, guid: 141968d84a3861748a43725d420e833f, type: 3}
+  lyd: {fileID: 8282686}
 --- !u!212 &21287276
 SpriteRenderer:
   m_ObjectHideFlags: 1
