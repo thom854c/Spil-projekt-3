@@ -13,7 +13,7 @@ public class MagicMissile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player" || other.tag == "Missile" || other.tag == "CheckPoint")
+        if (other.tag == "Player" || other.tag == "Missile" || other.tag == "CheckPoint"||other.tag == "PlayerDetector")
         {
             //do nothing
         }

@@ -18,7 +18,7 @@ public class MissileBehaviour : MonoBehaviour
             StaticVariables.PlayerHealth --;
             Destroy(gameObject);
         }
-        else if (other.tag == "Missile" || other.tag == "Boss" ||other.tag == "CheckPoint")
+        else if (other.tag == "Missile" || other.tag == "Boss" ||other.tag == "CheckPoint" ||other.tag == "PlayerDetector")
         {
            //do nothing 
         }
