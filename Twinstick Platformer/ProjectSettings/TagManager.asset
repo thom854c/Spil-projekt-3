@@ -52,6 +52,9 @@ TagManager:
   - name: BehindCharacters
     uniqueID: 153405907
     locked: 0
+  - name: Checkpoints and stuff
+    uniqueID: 3384851877
+    locked: 0
   - name: Character
     uniqueID: 851689369
     locked: 0

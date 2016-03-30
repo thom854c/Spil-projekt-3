@@ -45,6 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\MainGUI\MenuScript\AudioVideoScript.cs" />
+     <Compile Include="Assets\MainGUI\MenuScript\MainMenuScript.cs" />
      <Compile Include="Assets\Scripts\AiEvent.cs" />
      <Compile Include="Assets\Scripts\BossBehaviour.cs" />
      <Compile Include="Assets\Scripts\CameraScript.cs" />
@@ -54,9 +56,11 @@
      <Compile Include="Assets\Scripts\ControllerState2D.cs" />
      <Compile Include="Assets\Scripts\DeadlyObject.cs" />
      <Compile Include="Assets\Scripts\DetectPlayer.cs" />
+     <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\FalseWall.cs" />
      <Compile Include="Assets\Scripts\HitsObjectChecker.cs" />
+     <Compile Include="Assets\Scripts\MagicMissile.cs" />
      <Compile Include="Assets\Scripts\MissileBehaviour.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Respawn.cs" />

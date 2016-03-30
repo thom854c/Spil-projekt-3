@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 8bb104c7d9c1d884c9f594782c4f0895
-timeCreated: 1459343749
+guid: 57ab9ccb0c184794e9f29cbfa2156471
+timeCreated: 1459342869
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Chandelier_0
-    21300002: Chandelier_1
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -40,10 +38,10 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 2
+  alignment: 7
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 16
@@ -51,45 +49,7 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: Chandelier_0
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 3
-        width: 44
-        height: 61
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -12, y: 0}
-        - {x: -22, y: -10}
-        - {x: -22, y: -56}
-        - {x: -21, y: -61}
-        - {x: 17, y: -61}
-        - {x: 22, y: -56}
-        - {x: 22, y: -18}
-        - {x: 17, y: 0}
-    - name: Chandelier_1
-      rect:
-        serializedVersion: 2
-        x: 73
-        y: 3
-        width: 44
-        height: 61
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -12, y: 0}
-        - {x: -22, y: -10}
-        - {x: -22, y: -56}
-        - {x: -21, y: -61}
-        - {x: 17, y: -61}
-        - {x: 22, y: -56}
-        - {x: 22, y: -18}
-        - {x: 17, y: 0}
+    sprites: []
     outline: []
   spritePackingTag: 
   userData: 

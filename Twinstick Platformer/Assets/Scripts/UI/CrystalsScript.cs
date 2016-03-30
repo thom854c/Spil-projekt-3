@@ -33,12 +33,6 @@ public class CrystalsScript : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-        Player = GameObject.FindGameObjectWithTag("Player");
-        if (Player.name == "Player (clone)")
-        {
-            Destroy(Player);
-            Player = GameObject.FindGameObjectWithTag("Player");            
-        }
         CrystalsCircleRadius = Screen.width/14;
         //Max_Mana = GetComponent<Player>().MaxMana;
         //Cur_Mana = GetComponent<Player>().curMana;
