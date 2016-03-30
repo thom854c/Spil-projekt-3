@@ -49,6 +49,10 @@ public class Player : MonoBehaviour
         HandleEnergy();
         HandleInput();
 
+        ClampHealth();
+
+
+
         var movementFactor = controller.State.IsGrounded ? SpeedAccelerationOnGround : SpeedAccelerationInAir;
 
 
@@ -231,4 +235,13 @@ public class Player : MonoBehaviour
     {
         WalkSound.Play();
     }
+
+    private void ClampHealth()
+    {
+        if (StaticVariables.PlayerHealth > StaticVariables.MaxHealth)
+        {
+            StaticVariables.PlayerHealth = StaticVariables.MaxHealth;
+        }
+    }
+
 }

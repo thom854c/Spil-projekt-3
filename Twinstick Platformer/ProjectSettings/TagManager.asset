@@ -16,6 +16,7 @@ TagManager:
   - Missile
   - Potion
   - FalseWall
+  - Music
   layers:
   - Default
   - TransparentFX

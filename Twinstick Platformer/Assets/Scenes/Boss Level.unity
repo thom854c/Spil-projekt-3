@@ -1566,6 +1566,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11466940, guid: f35f4cb0367b9e84491bf31275458ff0, type: 2}
+      propertyPath: DeaccelerationOnGround
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466940, guid: f35f4cb0367b9e84491bf31275458ff0, type: 2}
+      propertyPath: DeaccelerationInAir
+      value: 0.998
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466940, guid: f35f4cb0367b9e84491bf31275458ff0, type: 2}
+      propertyPath: SpeedAccelerationOnGround
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466940, guid: f35f4cb0367b9e84491bf31275458ff0, type: 2}
+      propertyPath: SpeedAccelerationInAir
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11423490, guid: f35f4cb0367b9e84491bf31275458ff0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f35f4cb0367b9e84491bf31275458ff0, type: 2}
@@ -5287,7 +5303,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 408334, guid: 706f5ad5addff10408eda82cfd97402e, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 11488346, guid: 706f5ad5addff10408eda82cfd97402e, type: 2}
       propertyPath: cameraStartX
@@ -5305,7 +5321,8 @@ Prefab:
       propertyPath: cameraEndY
       value: 22
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8212474, guid: 706f5ad5addff10408eda82cfd97402e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 706f5ad5addff10408eda82cfd97402e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &803474972 stripped
