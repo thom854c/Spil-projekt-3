@@ -114,7 +114,7 @@ public class MainMenuScript : MonoBehaviour
                 _isLevelSelectMenu = true;
             }
 
-            if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 140, 200, 70), " Controlls", "Button Style"))
+            if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 140, 200, 70), " Controls", "Button Style"))
             {
                 _isFirstMenu = false;
                 _isControllMenu = true;
