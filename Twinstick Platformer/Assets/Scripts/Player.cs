@@ -159,7 +159,7 @@ public class Player : MonoBehaviour
     private void FireMissile()
     {
 
-        if (Input.GetAxisRaw(controllerString + "R2")<0 && controller.PointDebugActive.gameObject.active && !hasFired && curMana > 0)
+        if (Input.GetButtonDown(controllerString + "R2") && controller.PointDebugActive.gameObject.active && !hasFired && curMana > 0)
         {
             Instantiate(MagicMissile, transform.position,
                 Quaternion.Euler(0, 0, Mathf.Rad2Deg*(Mathf.Atan2(controller.pointVector.y, controller.pointVector.x))-90));
