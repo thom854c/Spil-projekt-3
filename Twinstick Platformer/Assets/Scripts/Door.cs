@@ -13,7 +13,6 @@ public class Door : MonoBehaviour {
     {
 	    if (other.tag == "Player")
 	    {
-            Debug.Log("'NextLvlWorksMaybe' - Avokadoh");
 	        Application.LoadLevel(Application.loadedLevel + 1);
 	    }
 	}
