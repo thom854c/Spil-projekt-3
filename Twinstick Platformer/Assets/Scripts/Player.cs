@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     public bool canPoint = true, manaUsedThisFrame = false;
     public Animator anim;
     public GameObject MagicMissile;
-
+    public AudioSource MissileSound, HitSound, LowHPSound, DeadSound;
     public float manaTimer, manaRecharceTimer;
     private string controllerString;
 
@@ -58,6 +58,8 @@ public class Player : MonoBehaviour
         }
         HandleAnimation();
         FireMissile();
+        HealthSounds();
+
 
     }
 
@@ -168,6 +170,7 @@ public class Player : MonoBehaviour
                 Instantiate(MagicMissile, transform.position,
                     Quaternion.Euler(0, 0,
                         Mathf.Rad2Deg*(Mathf.Atan2(controller.pointVector.y, controller.pointVector.x)) - 90));
+                MissileSound.Play();
                 hasFired = true;
                 curMana--;
                 manaUsedThisFrame = true;
@@ -186,6 +189,7 @@ public class Player : MonoBehaviour
                 Instantiate(MagicMissile, transform.position,
                     Quaternion.Euler(0, 0,
                         Mathf.Rad2Deg*(Mathf.Atan2(controller.pointVector.y, controller.pointVector.x)) - 90));
+                MissileSound.Play();
                 hasFired = true;
                 curMana --;
                 manaUsedThisFrame = true;
@@ -195,6 +199,19 @@ public class Player : MonoBehaviour
                 hasFired = false;
             }
 
+        }
+
+    }
+
+    private void HealthSounds()
+    {
+        if (StaticVariables.PlayerHealth<=2)
+        {
+            LowHPSound.enabled = true;
+        }
+        else
+        {
+            LowHPSound.enabled = false;
         }
 
     }

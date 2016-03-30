@@ -13,23 +13,34 @@ public class MagicMissile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player" || other.tag == "Missile" || other.tag == "CheckPoint"||other.tag == "PlayerDetector" ||other.tag == "Orb" ||other.tag == "FalseWall")
+
+        switch (other.tag)
         {
-            //do nothing
-        }
-        else if (other.tag == "Boss")
-        {
-            StaticVariables.BossHealth --;
-            Destroy(gameObject);
-        }
-        else if (other.tag == "Enemy")
-        {
-            StaticVariables.EnemyHealth --;
-            Destroy(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
+            case "Boss":
+                StaticVariables.BossHealth --;
+                Destroy(gameObject);
+                break;
+            case "Enemy":
+                StaticVariables.EnemyHealth --;
+                Destroy(gameObject);
+                break;
+            case "Player":
+                break;
+            case "Missile":
+                break;
+            case "CheckPoint":
+                break;
+            case "PlayerDetector":
+                break;
+            case "Orb":
+                break;
+            case "FalseWall":
+                break;
+            case "Potion":
+                break;
+            default:
+                Destroy(gameObject);
+                break;
         }
 
     }

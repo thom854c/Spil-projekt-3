@@ -152,6 +152,10 @@ public class Enemy : MonoBehaviour
         if (AttackFinished && !DieSound.isPlaying)
         {
             StaticVariables.PlayerHealth = playerHealth-1;
+            if (StaticVariables.PlayerHealth > 0)
+            {
+                GameObject.Find("Player").GetComponent<Player>().HitSound.Play();
+            }
             GetComponent<Animator>().SetBool("Attacking", false);
         }
      

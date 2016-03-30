@@ -8,7 +8,7 @@ public class Respawn : MonoBehaviour
     public float lowerDeath = 4;
     public bool playerMortal;
     public float deathDelay;
-    float deathTimer;
+    float deathTimer, soundDelay = 2;
 // Use this for initialization
 	void Start () 
     {
@@ -44,11 +44,21 @@ public class Respawn : MonoBehaviour
     {
         if (playerMortal)
         {
-            StaticVariables.ResetBoss = true;
+            GameObject.Find("Player").GetComponent<Player>().DeadSound.enabled = true;
+
+        }
+        if (GameObject.Find("Player").GetComponent<Player>().DeadSound.isPlaying)
+        {
+            soundDelay -= Time.deltaTime;
+            Debug.Log(soundDelay);
+        }
+        else if (soundDelay < 2)
+        {
             transform.position = savedCheckpoint.transform.position;
             StaticVariables.PlayerHealth = StaticVariables.MaxHealth;
             GetComponent<Player>().curMana = GetComponent<Player>().MaxMana;
             playerMortal = false;
+            soundDelay = 2;
         }
         
     }

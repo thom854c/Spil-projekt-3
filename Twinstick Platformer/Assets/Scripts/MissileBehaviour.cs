@@ -13,18 +13,37 @@ public class MissileBehaviour : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        switch (other.tag)
         {
-            StaticVariables.PlayerHealth --;
-            Destroy(gameObject);
-        }
-        else if (other.tag == "Missile" || other.tag == "Boss" || other.tag == "CheckPoint" || other.tag == "PlayerDetector" || other.tag == "Orb")
-        {
-           //do nothing 
-        }
-        else
-        {
-            Destroy(gameObject);
+            case "Player":
+                StaticVariables.PlayerHealth--;
+                if (StaticVariables.PlayerHealth >0)
+                {
+                    GameObject.Find("Player").GetComponent<Player>().HitSound.Play();
+                }
+
+                Destroy(gameObject);
+                break;
+            case "Enemy":
+                Destroy(gameObject);
+                break;
+            case "Boss":
+                break;
+            case "Missile":
+                break;
+            case "CheckPoint":
+                break;
+            case "PlayerDetector":
+                break;
+            case "Orb":
+                break;
+            case "FalseWall":
+                break;
+            case "Potion":
+                break;
+            default:
+                Destroy(gameObject);
+                break;
         }
 
     }

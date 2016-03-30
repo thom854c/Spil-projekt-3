@@ -6,19 +6,19 @@ using UnityEngine.SceneManagement;
 public class BossBehaviour : MonoBehaviour
 {
     private int phase, startHealth, attacksFired = 1;
-    private float fireCooldown, cycleTime, spawnTime, fadeTime;
+    private float fireCooldown, cycleTime, spawnTime, fadeTime, passiveSoundColdown, deathDelay =2;
     private Animator anim;
     public float MaxCycleLenght, FireSpeed;
     public GameObject TPPoint1, TPPoint2, TPPoint3, Missile, UI;
     public bool FireMissleStar, ResetCycleTime, TeleportNow, Die;
     private bool isDead = false;
     public Texture2D Black;
+    public AudioSource MissileLaunch, Laugh;
 	void Start ()
 	{
 	    startHealth = StaticVariables.BossHealth;
 	    anim = GetComponent<Animator>();
 	    transform.parent.position = TPPoint1.transform.position;
-	    StaticVariables.ResetBoss = false;
         iTween.CameraFadeAdd(Black);
 	}
 	
@@ -49,7 +49,13 @@ public class BossBehaviour : MonoBehaviour
 	    }
 	    MissileStar();
         Teleport();
-        Reset();
+        passiveSoundColdown += Random.Range(0.2f, 1.2f) * Time.deltaTime;
+        if (passiveSoundColdown > 15)
+        {
+
+            Laugh.Play();
+            passiveSoundColdown = 0;
+        }
     }
 
     void HandleHealth()
@@ -93,6 +99,24 @@ public class BossBehaviour : MonoBehaviour
         {
             fadeTime -= Time.deltaTime;
         }
+
+        if (StaticVariables.PlayerHealth <= 0)
+        {
+            GameObject.Find("Player").GetComponent<Player>().DeadSound.enabled = true;
+            Debug.Log("spil");
+
+        }
+
+        if (GameObject.Find("Player").GetComponent<Player>().DeadSound.isPlaying)
+        {
+            Debug.Log(deathDelay);
+            deathDelay -= Time.deltaTime;
+        }
+        else if (deathDelay < 2)
+        {
+            StaticVariables.PlayerHealth = StaticVariables.MaxHealth;
+            Application.LoadLevel(Application.loadedLevel);
+        }
     }
 
     void Phase1()
@@ -134,6 +158,7 @@ public class BossBehaviour : MonoBehaviour
         fireCooldown -= Time.deltaTime;
         if (FireMissleStar && fireCooldown < 0)
         {
+            MissileLaunch.Play();
             for (int i = 0; i < 360; i += 45)
             {
                 Instantiate(Missile, transform.position, Quaternion.Euler(0, 0, i));
@@ -199,19 +224,4 @@ public class BossBehaviour : MonoBehaviour
 
     }
 
-    void Reset()
-    {
-        if (StaticVariables.ResetBoss)
-        {
-            StaticVariables.BossHealth = startHealth;
-            anim.SetBool("Teleport", false);
-            anim.SetBool("StartFire", false);
-            anim.SetInteger("Phase", 1);
-            anim.SetBool("Dying", false);
-            transform.parent.position = TPPoint1.transform.position;
-            StaticVariables.ResetBoss = false;
-            
-        }
-
-    }
 }

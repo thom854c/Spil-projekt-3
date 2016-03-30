@@ -12,8 +12,6 @@ public class StaticVariables : MonoBehaviour
     private static Vector2 activeCheckpoint;
     private static int bossHealth = 15;
 
-    private static bool resetBoss;
-
     public static int MaxHealth = 6, MaxMana;
 
     public static int PlayerHealth
@@ -58,9 +56,4 @@ public class StaticVariables : MonoBehaviour
         set { bossHealth = value; }
     }
 
-    public static bool ResetBoss
-    {
-        get { return resetBoss; }
-        set { resetBoss = value; }
-    }
 }
