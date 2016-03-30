@@ -24,8 +24,7 @@ public class DeadlyObject : MonoBehaviour
             case "Orb":
                 break;
             case "Enemy":
-                other.GetComponent<Enemy>().DieSound.Play();
-                other.GetComponent<SpriteRenderer>().enabled = false;
+                StaticVariables.EnemyHealth = 0;
                 break;
             default:
                 Destroy(other.gameObject);

@@ -11,8 +11,8 @@ GameObject:
   - 212: {fileID: 21259124}
   - 50: {fileID: 5046062}
   - 114: {fileID: 11444630}
-  - 60: {fileID: 6073626}
   - 95: {fileID: 9543318}
+  - 60: {fileID: 6000702}
   m_Layer: 0
   m_Name: MagicMissile
   m_TagString: Missile
@@ -49,7 +49,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &6073626
+--- !u!60 &6000702
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -63,14 +63,11 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -0.625, y: 1.0625}
-      - {x: -1.0625, y: 0.375}
-      - {x: -1.0625, y: -0.5625}
-      - {x: -0.625, y: -1}
-      - {x: 0.625, y: -1}
-      - {x: 1, y: -0.6875}
-      - {x: 1, y: 0.5}
-      - {x: 0.5625, y: 1.0625}
+    - - {x: -0.59375, y: -2.3125}
+      - {x: 0.53125, y: -2.3125}
+      - {x: 0.59375, y: -2.25}
+      - {x: 0.59375, y: 0}
+      - {x: -0.59375, y: 0}
 --- !u!95 &9543318
 Animator:
   serializedVersion: 3
@@ -126,7 +123,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f936a110713abc14dbb9de3f55f9f5eb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8e32d7f632db3d34fa6182746df6137e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

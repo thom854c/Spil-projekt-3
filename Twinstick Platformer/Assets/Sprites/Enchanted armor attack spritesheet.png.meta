@@ -1,9 +1,14 @@
 fileFormatVersion: 2
 guid: e258cbdde1249784d95e2031933bec2b
-timeCreated: 1459338762
+timeCreated: 1459343813
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Enchanted armor attack spritesheet_0
+    21300002: Enchanted armor attack spritesheet_1
+    21300004: Enchanted armor attack spritesheet_2
+    21300006: Enchanted armor attack spritesheet_3
+    21300008: Enchanted armor attack spritesheet_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -29,27 +34,139 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  spritePixelsToUnits: 16
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Enchanted armor attack spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 336
+        width: 94
+        height: 78
+      alignment: 9
+      pivot: {x: 0.39075232, y: 0.32587218}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13.269283, y: 52.58197}
+        - {x: -15.730717, y: 47.58197}
+        - {x: -36.730717, y: 17.58197}
+        - {x: -36.730717, y: -7.41803}
+        - {x: -24.730717, y: -25.41803}
+        - {x: 21.269283, y: -25.41803}
+        - {x: 57.269283, y: 8.58197}
+        - {x: 57.269283, y: 50.58197}
+        - {x: 56.269283, y: 52.58197}
+      - - {x: 32.269283, y: 35.58197}
+        - {x: 35.269283, y: 36.58197}
+        - {x: 35.269283, y: 39.58197}
+        - {x: 32.269283, y: 40.58197}
+        - {x: 30.269283, y: 38.58197}
+    - name: Enchanted armor attack spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 328
+        width: 109
+        height: 67
+      alignment: 9
+      pivot: {x: 0.30549425, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 70.701126, y: 25.5}
+        - {x: 42.701126, y: 33.5}
+        - {x: -7.298874, y: 33.5}
+        - {x: -33.298874, y: 13.5}
+        - {x: -33.298874, y: -27.5}
+        - {x: -16.298874, y: -33.5}
+        - {x: 55.701126, y: -33.5}
+        - {x: 68.701126, y: -24.5}
+        - {x: 75.701126, y: -10.5}
+        - {x: 75.701126, y: 23.5}
+    - name: Enchanted armor attack spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 173
+        width: 99
+        height: 94
+      alignment: 9
+      pivot: {x: 0.32684264, y: 0.64729714}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 61.64258, y: -6.845932}
+        - {x: 40.64258, y: -19.845932}
+        - {x: 38.64258, y: -21.845932}
+        - {x: 39.64258, y: -3.845932}
+        - {x: 22.642578, y: 33.154068}
+        - {x: -11.357422, y: 33.154068}
+        - {x: -32.35742, y: 24.154068}
+        - {x: -32.35742, y: -25.845932}
+        - {x: -11.357422, y: -60.845932}
+        - {x: 35.64258, y: -60.845932}
+        - {x: 66.64258, y: -50.845932}
+        - {x: 66.64258, y: -2.845932}
+        - {x: 64.64258, y: -3.845932}
+    - name: Enchanted armor attack spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 169
+        width: 85
+        height: 97
+      alignment: 9
+      pivot: {x: 0.37976936, y: 0.66653174}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.280396, y: 32.34642}
+        - {x: -32.280396, y: 29.34642}
+        - {x: -32.280396, y: -46.65358}
+        - {x: -31.280396, y: -57.65358}
+        - {x: -26.280396, y: -64.65358}
+        - {x: 52.719604, y: -64.65358}
+        - {x: 52.719604, y: 5.3464203}
+        - {x: 23.719604, y: 32.34642}
+    - name: Enchanted armor attack spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 38
+        width: 66
+        height: 102
+      alignment: 9
+      pivot: {x: 0.64476764, y: 0.6512312}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23.445335, y: -11.425583}
+        - {x: 13.445335, y: 35.574417}
+        - {x: -4.5546646, y: 35.574417}
+        - {x: -19.554665, y: 23.574417}
+        - {x: -18.554665, y: 17.574417}
+        - {x: -30.554665, y: 24.574417}
+        - {x: -42.554665, y: -5.425583}
+        - {x: -42.554665, y: -66.42558}
+        - {x: -34.554665, y: -66.42558}
+        - {x: -29.554665, y: -60.425583}
+        - {x: -4.5546646, y: -66.42558}
+        - {x: 23.445335, y: -66.42558}
     outline: []
   spritePackingTag: 
   userData: 

@@ -513,10 +513,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_Animations.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 475644, guid: ac45aedcf7f13fb4b8cb2957517cec65, type: 2}
       propertyPath: m_LocalPosition.x
       value: -3.3
@@ -549,16 +545,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 11424704, guid: ac45aedcf7f13fb4b8cb2957517cec65, type: 2}
-      propertyPath: MissileSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Animations.Array.data[0]
-      value: 
-      objectReference: {fileID: 7400000, guid: 4164381802c18c2429d134129e7c46de, type: 2}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac45aedcf7f13fb4b8cb2957517cec65, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &86554945
@@ -1303,14 +1290,6 @@ Prefab:
     - target: {fileID: 444710, guid: f35f4cb0367b9e84491bf31275458ff0, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11422712, guid: f35f4cb0367b9e84491bf31275458ff0, type: 2}
-      propertyPath: lowerDeath
-      value: -200
-      objectReference: {fileID: 0}
-    - target: {fileID: 11422712, guid: f35f4cb0367b9e84491bf31275458ff0, type: 2}
-      propertyPath: deathDelay
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f35f4cb0367b9e84491bf31275458ff0, type: 2}
@@ -6607,27 +6586,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 473376, guid: 47c61a95b7cd22c4296c3d193082f0a4, type: 2}
   m_PrefabInternal: {fileID: 1062266929}
---- !u!1 &1081886156 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 174360, guid: ac45aedcf7f13fb4b8cb2957517cec65, type: 2}
-  m_PrefabInternal: {fileID: 75666997}
---- !u!95 &1081886157
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1081886156}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1085349152
 Prefab:
   m_ObjectHideFlags: 0

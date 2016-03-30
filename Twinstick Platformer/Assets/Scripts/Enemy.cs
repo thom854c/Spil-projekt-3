@@ -4,13 +4,13 @@ using System.Collections;
 public class Enemy : MonoBehaviour
 {
     private CharacterController2D controller;
-    [HideInInspector] public bool MoveLeft, MoveRight, JumpAfterPlayer,JumpRight, Attacking = false, ApproachingDeath;
+    [HideInInspector] public bool MoveLeft, MoveRight, JumpAfterPlayer,JumpRight, Attacking, ApproachingDeath, AttackFinished;
     public bool ChasePlayer;
-    public int Health = 3,MoveSpeed ;
+    public int MoveSpeed ;
     public float PatrolLenght;
     private float delay, startPatrolTime, turnColdown, attackColdown, passiveSoundColdown;
     [HideInInspector]public float PatrolTime;
-    private int patrolSpeed, direktion = 1;
+    private int patrolSpeed, direktion = 1, playerHealth;
     public AudioSource AttackSound,DieSound, PassiveSound;
     private bool wasPlaying;
 
@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
         patrolSpeed = MoveSpeed;
         PatrolTime = PatrolLenght/MoveSpeed;
         startPatrolTime = PatrolLenght / MoveSpeed;
+        playerHealth = StaticVariables.PlayerHealth;
     }
 
     public void Update()
@@ -31,9 +32,10 @@ public class Enemy : MonoBehaviour
         }
         Patrol();
         Attack();
-        if (Health <= 0)
+        if (StaticVariables.EnemyHealth <= 0)
         {
-            Destroy(gameObject);
+            DieSound.Play();
+            GetComponent<SpriteRenderer>().enabled = false;
         }
 
         if (DieSound.isPlaying)
@@ -45,6 +47,8 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
         passiveSoundColdown += Random.Range(0.2f, 1.2f) * Time.deltaTime;
+
+        Debug.Log(StaticVariables.EnemyHealth);
 
     }
 
@@ -130,27 +134,28 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    bool attacked = false;
-    void Attack() 
+    void Attack()
     {
-
-        if (Attacking && attackColdown <= 0)
+        
+        attackColdown -= Time.deltaTime;
+        if (Attacking && attackColdown < 0)
         {
-            attackColdown = 1;
-            attacked = false;
-        }
-
-
-        if (attackColdown > 0)
-        {
-            attackColdown -= Time.deltaTime;
-            if (attackColdown < 0.5f && !attacked && Attacking)
-            {
+                GetComponent<Animator>().SetBool("Attacking", true);
                 AttackSound.Play();
-                StaticVariables.PlayerHealth --;
-                attacked = true;
-            }
+                attackColdown = 2;
+            playerHealth = StaticVariables.PlayerHealth;
+
         }
+        if(!Attacking)
+        {
+            GetComponent<Animator>().SetBool("Attacking", false);
+        }
+        if (AttackFinished)
+        {
+            StaticVariables.PlayerHealth = playerHealth-1;
+            GetComponent<Animator>().SetBool("Attacking", false);
+        }
+     
     }
 
 }

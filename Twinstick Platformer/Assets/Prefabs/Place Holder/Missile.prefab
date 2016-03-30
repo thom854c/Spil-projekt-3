@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11424704}
   - 50: {fileID: 5097688}
   - 60: {fileID: 6010342}
-  - 95: {fileID: 9567584}
+  - 95: {fileID: 9503944}
   m_Layer: 0
   m_Name: Missile
   m_TagString: Missile
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.2, y: -15.8, z: 0}
+  m_LocalPosition: {x: -3.3, y: 10.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,7 +58,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
@@ -71,7 +71,7 @@ PolygonCollider2D:
       - {x: 0.25, y: -0.71330833}
       - {x: 0.75, y: -0.40080833}
       - {x: 0.75, y: 0.47419167}
---- !u!95 &9567584
+--- !u!95 &9503944
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -80,7 +80,7 @@ Animator:
   m_GameObject: {fileID: 174360}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e46f7a2433f7131408c4980697ebe2bf, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe75f117309621349ba0a382fe355705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MissileSpeed: 20
+  MissileSpeed: 10
 --- !u!212 &21281342
 SpriteRenderer:
   m_ObjectHideFlags: 1
