@@ -41,6 +41,7 @@ public class Respawn : MonoBehaviour
         if (playerMortal)
         {
             transform.position = savedCheckpoint.transform.position;
+            StaticVariables.PlayerHealth = StaticVariables.MaxHealth;
             playerMortal = false;
         }
         

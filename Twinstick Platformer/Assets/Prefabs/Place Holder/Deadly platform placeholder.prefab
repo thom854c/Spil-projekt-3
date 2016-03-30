@@ -10,10 +10,9 @@ GameObject:
   - 4: {fileID: 471194}
   - 212: {fileID: 21238556}
   - 61: {fileID: 6197686}
-  - 114: {fileID: 11499750}
   m_Layer: 8
   m_Name: Deadly platform placeholder
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,8 +24,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 193.26, y: 8, z: 0}
-  m_LocalScale: {x: 18.59, y: 3.8, z: 1}
+  m_LocalPosition: {x: 168.3, y: 55.995, z: 0}
+  m_LocalScale: {x: 72.60353, y: 7.999209, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -44,17 +43,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!114 &11499750
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 176748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cff5417d81fa79446ab93d3a995e26e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &21238556
 SpriteRenderer:
   m_ObjectHideFlags: 1
