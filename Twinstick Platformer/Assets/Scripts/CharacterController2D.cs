@@ -42,7 +42,6 @@ public class CharacterController2D : MonoBehaviour
     private ControllerParameters2D overrideParameters;
     private float jumpIn;
 
-
     private Vector3
         raycastTopLeft,
         raycastBottomRight,

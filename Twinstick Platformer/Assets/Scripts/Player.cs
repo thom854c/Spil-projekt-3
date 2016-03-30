@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditorInternal;
+using UnityEngine;
 using System.Collections;
 
 public class Player : MonoBehaviour
@@ -14,12 +15,14 @@ public class Player : MonoBehaviour
     public float DeaccelerationOnGround = 0.97f, DeaccelerationInAir = 0.99f, beforeManaRecharceTime, manaRecharceTime;
     public int curMana, MaxMana, pushManaCost;
     public bool canPoint = true, manaUsedThisFrame = false;
+    public Animator anim;
 
     public float manaTimer, manaRecharceTimer;
     private string controllerString;
 
     public void Start()
     {
+        anim = GetComponentInChildren<Animator>();
         controller = GetComponent<CharacterController2D>();
         isFacingRight = transform.localScale.x > 0;
         if (Input.GetJoystickNames().Length !=0)
@@ -52,6 +55,7 @@ public class Player : MonoBehaviour
         {
             controller.PointAndPush(Input.GetAxis(controllerString + "RS Horizontal"), Input.GetAxis(controllerString + "RS Vertical"), Input.GetButton(controllerString + "Push"), Input.GetButtonDown(controllerString + "Push"));
         }
+        HandleAnimation();
     }
 
     public void FixedUpdate()
@@ -133,5 +137,19 @@ public class Player : MonoBehaviour
         }
 
         manaUsedThisFrame = false;
+    }
+
+    private void HandleAnimation()
+    {
+        if ((controller.Velocity.x > 0f && Input.GetAxis("Horizontal") > 0f) || (controller.Velocity.x < 0f && Input.GetAxis("Horizontal") < 0f))
+        {
+            anim.SetBool("horizontalMovement", true);
+        }
+        else
+        {
+            anim.SetBool("horizontalMovement", false);
+        }
+
+       anim.SetBool("onGround", controller.State.IsGrounded);
     }
 }

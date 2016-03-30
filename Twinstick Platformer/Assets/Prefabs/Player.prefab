@@ -32,6 +32,7 @@ GameObject:
   - 114: {fileID: 11448078}
   - 50: {fileID: 5041558}
   - 61: {fileID: 6116620}
+  - 95: {fileID: 9579480}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -155,6 +156,23 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5}
+--- !u!95 &9579480
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181834}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c8a030b78363d643b371f445decb254, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11408138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -226,6 +244,7 @@ MonoBehaviour:
   pushManaCost: 1
   canPoint: 1
   manaUsedThisFrame: 0
+  anim: {fileID: 0}
   manaTimer: 0
   manaRecharceTimer: 0
 --- !u!212 &21222462
