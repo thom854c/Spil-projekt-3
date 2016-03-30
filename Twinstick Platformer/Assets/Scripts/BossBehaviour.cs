@@ -16,6 +16,7 @@ public class BossBehaviour : MonoBehaviour
 	    startHealth = StaticVariables.BossHealth;
 	    anim = GetComponent<Animator>();
 	    transform.parent.position = TPPoint1.transform.position;
+	    StaticVariables.ResetBoss = false;
 	}
 	
 

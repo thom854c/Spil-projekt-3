@@ -44,6 +44,7 @@ public class Respawn : MonoBehaviour
     {
         if (playerMortal)
         {
+            StaticVariables.ResetBoss = true;
             transform.position = savedCheckpoint.transform.position;
             StaticVariables.PlayerHealth = StaticVariables.MaxHealth;
             GetComponent<Player>().curMana = GetComponent<Player>().MaxMana;
