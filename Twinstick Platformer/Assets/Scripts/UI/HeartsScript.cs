@@ -30,7 +30,7 @@ public class HeartsScript : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-        
+        HeartsCircleRadius = Screen.width / 14;
 
 	}
 	

@@ -14,9 +14,10 @@ public class CrystalsScript : MonoBehaviour
     public GameObject Player;
 
     //Used for calculating heart position 
-    public float CrystalsCircleRadius;
     public float CrystalsAngleIncrease;
     public float CrystalsStartAngle;
+
+    private float CrystalsCircleRadius;
 
     //Number of Hearts the player has (value will probably come from another script)
     public int CrystalNumber;
@@ -33,6 +34,7 @@ public class CrystalsScript : MonoBehaviour
 	void Start () 
     {
         Player = GameObject.FindGameObjectWithTag("Player");
+        CrystalsCircleRadius = Screen.width/14;
         //Max_Mana = GetComponent<Player>().MaxMana;
         //Cur_Mana = GetComponent<Player>().curMana;
 	}
