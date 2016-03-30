@@ -31,9 +31,13 @@ public class Respawn : MonoBehaviour
                 playerMortal = true;
                 deathTimer = 0;
             }
-
+        
         }
-	
+
+        if (StaticVariables.PlayerHealth == 0)
+        {
+            Die();
+        }
 	}
 
     void Die()
@@ -42,6 +46,7 @@ public class Respawn : MonoBehaviour
         {
             transform.position = savedCheckpoint.transform.position;
             StaticVariables.PlayerHealth = StaticVariables.MaxHealth;
+            GetComponent<Player>().curMana = GetComponent<Player>().MaxMana;
             playerMortal = false;
         }
         
