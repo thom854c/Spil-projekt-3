@@ -40,6 +40,7 @@ GameObject:
   - 82: {fileID: 8293336}
   - 114: {fileID: 11423490}
   - 82: {fileID: 8233078}
+  - 82: {fileID: 8276398}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -460,6 +461,80 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!82 &8276398
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181834}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 201e86ae594f74145875e273ce1653d8, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.571
+  m_Pitch: 0.69
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!82 &8293336
 AudioSource:
   m_ObjectHideFlags: 1
@@ -678,7 +753,7 @@ MonoBehaviour:
   HitSound: {fileID: 8252100}
   LowHPSound: {fileID: 8270486}
   DeadSound: {fileID: 8293336}
-  JumpSound: {fileID: 8233078}
+  JumpSound: {fileID: 8276398}
   WalkSound: {fileID: 8233078}
   manaTimer: 0
   manaRecharceTimer: 0
@@ -806,7 +881,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 11a1bb733f3233a49a0cde545e6c51cb, type: 3}
+      objectReference: {fileID: 8300000, guid: 201e86ae594f74145875e273ce1653d8, type: 3}
     - target: {fileID: 0}
       propertyPath: Loop
       value: 1
@@ -847,7 +922,15 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: JumpSound
       value: 
-      objectReference: {fileID: 8233078}
+      objectReference: {fileID: 8276398}
+    - target: {fileID: 0}
+      propertyPath: m_Volume
+      value: 0.571
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Pitch
+      value: 0.69
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 181834}
