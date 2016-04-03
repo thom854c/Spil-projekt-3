@@ -25,6 +25,7 @@ public class BossBehaviour : MonoBehaviour
 
 	void Update ()
 	{
+        Debug.Log(StaticVariables.BossHealth + " startliv:" + startHealth);
 	    HandleHealth();
 	    switch (phase)
 	    {
@@ -37,7 +38,11 @@ public class BossBehaviour : MonoBehaviour
             case 3:
                 Phase3();
                 break;
-            default:
+            case 0:
+            anim.SetBool("Teleport", false);
+            anim.SetBool("StartFire", false);
+            anim.SetInteger("Phase",1);
+            anim.SetBool("Dying", true);
                 break;
 	    }
 	    cycleTime += Time.deltaTime;
@@ -75,11 +80,6 @@ public class BossBehaviour : MonoBehaviour
         else
         {
             phase = 0;
-            anim.SetBool("Teleport", false);
-            anim.SetBool("StartFire", false);
-            anim.SetInteger("Phase",1);
-            anim.SetBool("Dying", true);
-
         }
 
 
@@ -113,6 +113,7 @@ public class BossBehaviour : MonoBehaviour
         }
         else if (deathDelay < 2)
         {
+            StaticVariables.BossHealth = startHealth;
             StaticVariables.PlayerHealth = StaticVariables.MaxHealth;
             Application.LoadLevel(Application.loadedLevel);
         }
